@@ -1,0 +1,14 @@
+// //・・・・・・・ レスポンシブwidth設定・・・・・・・
+$pc: 768px; // 全体ブレイクポイント（タブレット以上）
+
+@mixin pc {
+  @media (min-width: ($pc + 1)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
