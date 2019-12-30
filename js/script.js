@@ -10,5 +10,13 @@ $(function(){
   }
 
   $('#drawer-menu').slideToggle();
+
+var movefun = function( event ){
+	event.preventDefault();
+}
+  // スクロール停止の処理
+  window.addEventListener( 'touchmove' , movefun , { passive: false } );
+  // スクロール停止することを停止する処理
+  window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+  });
 });
-})
