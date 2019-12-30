@@ -1,8 +1,9 @@
-body::before {
+#wrap::before {
   content: "";
   z-index: -1;
   width: 100%;
   height: 100vh;
+  display: block;
   background-image: url(../../img/self/selfphoto1.jpg);
   background-size: cover;
   -webkit-background-size: cover;
@@ -11,4 +12,5 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
+  transform: translateZ(0);
 }
