@@ -200,6 +200,12 @@ body::before {
   letter-spacing: 8px;
 }
 
+@media (max-width: 768px) {
+  .profile-name__inner {
+    font-size: 20px;
+  }
+}
+
 .profile-text {
   padding: 100vh 16px 0 16px;
   width: 50%;
