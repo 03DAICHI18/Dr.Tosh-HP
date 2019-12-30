@@ -8,13 +8,16 @@
   position: fixed;
   top: 0;
   z-index: 100;
+  background: rgba(0, 0, 0, 0.3);
 
   &__nav {
     display: flex;
+    height: 48px;
+    line-height: 48px;
   }
   &__list {
-    margin: 30px 30px 0 30px;
-
+    margin: 0 32px 0 32px;
+    
     a {
         color: #F5F5F5;
         position: relative;
@@ -24,7 +27,7 @@
         position: absolute;
         content: '';
         width: 100%;
-        bottom: -5px;
+        bottom: -8px;
         left: 0;
         height: 0.1rem;
         background: #F5F5F5;
@@ -36,7 +39,6 @@
         transform: scale(1, 1);
       }
     }
-  
 }
 
 @include sp {
@@ -58,10 +60,10 @@
   
   #drawer-btn {
     position: fixed;
-    right: 30px;
+    right: 32px;
     width: 45px;
     height: 45px;
-    margin-top: 30px;
+    margin-top: 32px;
     z-index: 120;
     transition: 0.3s;
     cursor: pointer;
@@ -69,23 +71,42 @@
 
   #drawer-btn span {
     position: fixed;
-    right: 30px;
+    right: 32px;
     width: 45px;
-    height: 5px;
-    margin-top: 30px;
+    height: 3px;
+    margin-top: 32px;
     border-radius: 2px;
     background-color: #F5F5F5;
+    transition: all .5s;
   }
 
   #drawer-btn span:nth-of-type(1) {
-    top: 0;
+    top: 9px;
   }
   #drawer-btn span:nth-of-type(2) {
-    top: 20px;
+    top: 18px;
   }
   #drawer-btn span:nth-of-type(3) {
-    top: 40px;
+    top: 27px;
   }
+
+  /* 最初のspanをマイナス45度に */
+#drawer-btn.active span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+#drawer-btn.active span:nth-child(2),
+#drawer-btn.active span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 
   #drawer-menu {
     display: none;
