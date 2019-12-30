@@ -4,9 +4,9 @@ $(function(){
   $('#drawer-btn').toggleClass('active');
 
   if ($(this).hasClass('active')){
-    $('#drawer-btn').addClass('active');
+    $('body , #drawer-btn').addClass('active');
   } else {
-    $('#drawer-btn').removeClass('active');
+    $('body , #drawer-btn').removeClass('active');
   }
 
   $('#drawer-menu').slideToggle();

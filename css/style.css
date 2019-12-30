@@ -124,6 +124,9 @@ body {
     display: none;
     width: 100%;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   #drawer-menu .drawer-menu__hidden {
     width: 100%;
@@ -138,6 +141,14 @@ body {
     padding-top: 30px;
     color: #F5F5F5;
   }
+}
+
+body {
+  overflow: auto;
+}
+
+body.active {
+  overflow: hidden;
 }
 
 body::before {
