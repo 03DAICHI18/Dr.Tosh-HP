@@ -30,12 +30,17 @@
   }
 }
 
+
 .profile-text {
-  padding: 100vh 16px 0 16px;
-  width: 50%;
-  margin-left: auto;
+  padding: 100vh 16px 128px 16px;
+
+  @include pc {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
   @include sp {
+    display: block;
     width: 100%;
     margin: 0 auto;
   }
@@ -43,18 +48,83 @@
   &__title {
     font-size: 40px;
     padding: 16px;
+
     @include sp {
       text-align: center;
     }
   }
-  &__about {
+
+@include pc {
+  .profile-text__about {
+    width: 50%;
     line-height: 1.5;
     letter-spacing: 3px;
-  }
-
-  &__about--link a {
-    color: rgb(240, 110, 87);
-    font-size: 24px;
-    text-decoration: underline;
+    .profile-text__about--link a {
+      color: rgb(240, 110, 87);
+      font-size: 24px;
+      text-decoration: underline;
+    }
   }
 }
+@include sp {
+  .profile-text__about {
+    line-height: 1.5;
+    .profile-text__about--link a {
+      color: rgb(240, 110, 87);
+      font-size: 20px;
+    }
+  }
+}
+
+  .profile-imgwrap {
+    @include pc {
+      width: 50%;
+    }
+    @include sp {
+      width: 100%;
+    }
+    .profile-img {
+      @include sp {
+        padding: 80px 0;
+        margin-left: 37vw;
+      }
+      @media screen and (max-width:650px){
+        margin-left: 35vw;
+      }
+      @media screen and (max-width:500px){
+        margin-left: 30vw;
+      }
+      @media screen and (max-width:400px){
+        margin-left: 28vw;
+      }
+
+      @include pc {
+        text-align: right;
+        margin-right: 1.6vw;
+      }
+      @media screen and (min-width:1000px){
+        margin-right: 2.2vw;
+      }
+      img {
+        width: 100px;
+        @include pc {
+          padding-top: 1000px;
+        }
+        @include sp {
+          width: 60px;
+        }
+        @media screen and (min-width:1000px) {
+          width: 115px;
+        }
+        @media screen and (min-width:1300px) {
+          width: 130px;
+        }
+      }
+  
+    }
+  }
+
+}
+
+
+
