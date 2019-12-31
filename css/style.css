@@ -280,24 +280,21 @@ body::before {
   line-height: 240px;
 }
 
-/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
-.swiper-slide:nth-child(4n+1) {
+.swiper-slide:nth-child(1) {
   background-image: url(../../img/selfslide2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
-.swiper-slide:nth-child(4n+2) {
+.swiper-slide:nth-child(2) {
   background-image: url(../../img/selfslide3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
-.swiper-slide:nth-child(4n+3) {
+.swiper-slide:nth-child(3) {
   background-image: url(../../img/selfslide4.jpg);
   background-size: cover;
   background-position: center;
