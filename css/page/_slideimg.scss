@@ -1,27 +1,40 @@
 .slideimg {
   width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 40px 0;
 }
 
-.slideimg-band {
-  width: 100%;
-  height: 80px;
-  background: #333;
+/* 全体のスタイル */
+.swiper-wrapper {
+	width: 100%;
+	height: 240px;
 }
-.slideimg1{
-  width: 50%;
-  margin: 0 auto;
+/* 全スライド共通スタイル */
+.swiper-slide {
+  color: rgba($color: #000000, $alpha: 0);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 240px;
+}
+/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
+.swiper-slide:nth-child(4n+1) {
   background-image: url(../../img/selfslide2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px;
 }
-.slideimg2{
-  
+/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
+.swiper-slide:nth-child(4n+2) {
+  background-image: url(../../img/selfslide3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.slideimg3{
-  
-}
-.slideimg4{
-  
+/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
+.swiper-slide:nth-child(4n+3) {
+  background-image: url(../../img/selfslide4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

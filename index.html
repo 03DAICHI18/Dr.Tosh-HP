@@ -22,11 +22,14 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
   <script src="js/script.js"></script>
 </head>
 <body>
   <div id="wrap">
+  <!-- ---------- ヘッダー ---------- -->
     <header>
       <div class="pc-header">
           <nav>
@@ -39,7 +42,7 @@
             </ul>
           </nav>
       </div>
-  <!--  ヘッダー レスポンシブレイアウト max-width: 768px -->
+      <!--  ヘッダー レスポンシブレイアウト max-width: 768px -->
       <div class="sp-header">
         <div class="drawer">
           <nav>
@@ -61,6 +64,7 @@
     </header>
   
     <main>
+    <!-- ---------- トップビジュアル ---------- -->
       <section>
         <div class="topvisual">
           <div class="profile">
@@ -81,25 +85,35 @@
                     <p>その他、UA、YUI、ヤン富田、真心ブラザーズ、エレファントラブはじめ数多くのアーティストとのコラボで話題を呼ぶ。(共演アーティスト:ボディドリー、ネビルブラザース、アラントゥーサン、忌野清志郎、YUKI、Nokko、泉谷しげる、東京スカパラダイスオーケストラ、サンディ、甲本ヒロト、など多数あり)</p>
                     <p>現在はcelebrationバンド<span class="profile-text__about--link"><a href="">HareHare</a></span>での活動も行っている。</p>
                   </div>
-                  <div class="profile-imgwrap">
-                    <p class="profile-img"><img src="img/Beard.png" alt="髭"></p>
-                  </div>
               </div>
           </div>
         </div>
       </section>
+
+      <!-- ---------- スライドショー ---------- -->
       <section>
         <div class="slideimg">
-          <div class="slideimg-band"></div>
-          <div class="slideimg1"></div>
-          <div class="slideimg2"></div>
-          <div class="slideimg3"></div>
-          <div class="slideimg4"></div>
-          <div class="slideimg-band"></div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <!-- 各スライド -->
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+              </div>
+            </div>
         </div>
       </section>
+
+      <!-- ---------- イメージロゴ ---------- -->
       <section>
-  
+        <div class="logo-wrap"></div>
+      </section>
+
+      <!-- ---------- ニュース ---------- -->
+      <section>
+        <div class="news">
+
+        </div>
       </section>
       <section>
   
@@ -116,5 +130,6 @@
   
     </footer>
   </div>
+  <script src="dist/js/swiper.js"></script>
 </body>
 </html>
