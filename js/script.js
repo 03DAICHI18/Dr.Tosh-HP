@@ -1,4 +1,20 @@
+// ↓load関数
+// ローディング制御（2）====================================
+$(window).on('load', function () {
+  $('.load').delay(1000).fadeOut(1000); 
+  $('.load__animation').delay(1000).fadeOut(1000); 
+  $('#wrap').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
+});
+
+
+// ↓ready関数
 $(function(){
+// ローディンング制御（1）====================================
+  var h = $(window).height(); //ブラウザウィンドウの高さを取得
+  $('#wrap').css('display','none'); //初期状態ではメインコンテンツを非表示
+  $('.load ,.load__animation').height(h).css('display','block'); //ウィンドウの高さに合わせでローディング画面を表示
+
+
 // ハンバーガーメニュー====================================
   $('#drawer-btn , .drawer-menu__hidden').on('click',function(){
   $('#drawer-btn').toggleClass('active');
@@ -19,25 +35,4 @@ var movefun = function( event ){
   // スクロール停止することを停止する処理
   window.removeEventListener( 'touchmove' , movefun, { passive: false } );
   });
-
-    // スライドショー（Swiper.js）====================================
-      var mySwiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        slidesPerView: 2,
-        autoplay: {
-          delay: 3000,
-          stopOnLastSlide: false,
-          disableOnInteraction: false,
-          reverseDirection: false
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-        }
-      });
 });

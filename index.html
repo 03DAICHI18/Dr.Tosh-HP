@@ -25,6 +25,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
 </head>
 <body>
+  <div class="load">
+    <div class="load__animation">Now Loading...</div>
+    <img src="img/beard-load.png" alt="ローディング画像">
+  </div>
+  
   <div id="wrap">
   <!-- ---------- ヘッダー ---------- -->
     <header>
@@ -120,11 +125,33 @@
   
     <footer>
       <!-- ---------- イメージロゴ ---------- -->
-        <div class="logo-wrap"><div class="logo-wrap__inner"></div></div>
+        <div class="logo-wrap"><div class="logo-wrapinner"></div></div>
     </footer>
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script>
+    // スライドショー（Swiper.js）====================================
+  var mySwiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    slidesPerView: 2,
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+      reverseDirection: false
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
+  </script>
 </body>
 </html>
