@@ -30,9 +30,9 @@ $(function(){
 
 // ↓load関数
 // ローディング制御（1）====================================
-$(window).on('load', function () {
+$(window).one('load', function () {
   $('.load').delay(1000).fadeOut(1000); 
   $('.load__animation').delay(1000).fadeOut(1000); 
   $('#wrap').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
-});
+}).load();
 
