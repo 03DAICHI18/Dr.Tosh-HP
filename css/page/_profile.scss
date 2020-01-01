@@ -47,10 +47,7 @@
   &__title {
     font-size: 40px;
     padding: 16px;
-
-    @include sp {
-      text-align: center;
-    }
+    text-align: center;
   }
 
 @include pc {

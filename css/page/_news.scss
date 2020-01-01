@@ -1,5 +1,59 @@
 .news {
   width: 100%;
-  height: 1000px;
-  background: #efefef;
+  padding: 48px 32px;
+  background: rgba(220, 220, 220, 0.9);
+  color: #333333;
+  @include sp {
+    padding: 32px 16px;
+  }
+  
+  &__title {
+    text-align: center;
+    padding: 20px;
+    @include fontsize(30);
+  }
+
+    table {
+      width: 100%;
+      @include pc {
+      th {
+        padding: 16px;
+        border: 1px solid #333333;
+        background: rgb(130, 130, 130);
+      }
+      td {
+        padding: 16px;
+        line-height: 1.5;
+      }
+
+      .td-last {
+        width: 40%;
+      }
+    }
+    
+    @include sp {
+      tr {
+        border-bottom: 16px solid rgb(130, 130, 130);
+      }
+      th {
+        display: none;
+      }
+      td {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        line-height: 1.5;
+      }
+
+      .td-time {
+        text-decoration: underline;
+      }
+      .td-last {
+        padding-bottom: 24px;
+      }
+    }
+  }
+
 }
+
+  
