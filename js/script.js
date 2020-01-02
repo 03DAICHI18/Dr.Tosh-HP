@@ -2,7 +2,6 @@
 $(function(){
 // ローディンング制御（2）====================================
   var h = $(window).height(); //ブラウザウィンドウの高さを取得
-  $('#wrap').css('display','none'); //初期状態ではメインコンテンツを非表示
   $('.load , .load__animation').height(h).css('display','block'); //ウィンドウの高さに合わせでローディング画面を表示
 
 
@@ -51,7 +50,6 @@ $(function(){
             },2000);
   }  startTimer();
 
-
 });
 
 // ↓load関数
@@ -59,6 +57,6 @@ $(function(){
 $(window).on('load', function () {
   $('.load').delay(1000).fadeOut(1000); 
   $('.load__animation').delay(1000).fadeOut(1000); 
+  // $('.load , .load__animation').height(h).css('display','hidden');
   $('#wrap').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
 });
-
