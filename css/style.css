@@ -341,7 +341,7 @@ body::before {
 }
 
 .swiper-slide:nth-child(3) {
-  background-image: url(../img/selfslide4.jpg);
+  background-image: url(../img/selfslide5.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -354,7 +354,6 @@ body::before {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .news {
@@ -478,6 +477,10 @@ body::before {
   .live-6 {
     position: absolute;
     right: 40%;
+  }
+  .live-7 {
+    position: absolute;
+    left: 5%;
   }
 }
 
