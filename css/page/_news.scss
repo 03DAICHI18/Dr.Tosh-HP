@@ -1,8 +1,12 @@
 .news {
   width: 100%;
   padding: 48px 32px;
-  background: rgba(220, 220, 220, 0.9);
+  background: #f5f5f5;
   color: #333333;
+  a {
+    color: #333333;
+    text-decoration: underline;
+  }
   @include sp {
     padding: 32px 16px;
   }
@@ -30,7 +34,11 @@
         width: 40%;
       }
     }
-    
+    @include pc {
+      .td-place::before {
+        content: "［place］";
+      }
+    }
     @include sp {
       tr {
         border-bottom: 16px solid rgb(130, 130, 130);
@@ -45,11 +53,17 @@
         line-height: 1.5;
       }
 
-      .td-time {
-        text-decoration: underline;
+      .td-event::before {
+        content: "events　: ";
       }
-      .td-last {
+      .td-place::before {
+        content: "place　: ";
+      }
+      .td-join {
         padding-bottom: 24px;
+      }
+      .td-join::before {
+        content: "join　: ";
       }
     }
   }

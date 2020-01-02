@@ -1,31 +1,74 @@
 .live {
+  height: 440px;
   background: rgba(0, 0, 0, 0.9);
 }
 
 .live-visual {
-  background-color: #f6f6f6;
   width: 400px;
   height:400px;
-  padding: 10px;
-  @include sp {
-    width: 300px;
-    height: 300px;
-  }
-  position: relative;
-  margin: 0 auto;
 }
 
-.slideshow img {
-  width: 400px;
-  height: 400px;
-  @include sp {
-    width: 100%;
-    height: 100%;
+@include pc {
+  .slideshow img {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border: 5px double #f6f6f6;
   }
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  border: 5px dashed #f6f6f6;
+
+  .slideshow {
+    padding-top: 20px;
+  }
+
+    .live-1 {
+      position: absolute;
+      left: 5%;
+    }
+    .live-2 {
+      position: absolute;
+      left: 20%;
+    }
+    .live-3 {
+      position: absolute;
+      left: 40%;
+    }
+    .live-4 {
+      position: absolute;
+      right: 5%;
+    }
+    .live-5 {
+      position: absolute;
+      right: 20%;
+    }
+    .live-6 {
+      position: absolute;
+      right: 40%;
+    }
+}
+
+@include sp {
+  .live {
+    height: 300px;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .live-visual {
+      width: 240px;
+      height: 240px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .slideshow img {
+    @include sp {
+      width: 100%;
+      height: 100%;
+    }
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    object-fit: cover;
+    border: 5px dashed #f6f6f6;
+  }
 }

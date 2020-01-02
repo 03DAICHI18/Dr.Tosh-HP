@@ -360,8 +360,13 @@ body::before {
 .news {
   width: 100%;
   padding: 48px 32px;
-  background: rgba(220, 220, 220, 0.9);
+  background: #f5f5f5;
   color: #333333;
+}
+
+.news a {
+  color: #333333;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -396,6 +401,12 @@ body::before {
   }
 }
 
+@media (min-width: 769px) {
+  .news table .td-place::before {
+    content: "［place］";
+  }
+}
+
 @media (max-width: 768px) {
   .news table tr {
     border-bottom: 16px solid #828282;
@@ -409,46 +420,89 @@ body::before {
     padding: 8px;
     line-height: 1.5;
   }
-  .news table .td-time {
-    text-decoration: underline;
+  .news table .td-event::before {
+    content: "events　: ";
   }
-  .news table .td-last {
+  .news table .td-place::before {
+    content: "place　: ";
+  }
+  .news table .td-join {
     padding-bottom: 24px;
+  }
+  .news table .td-join::before {
+    content: "join　: ";
   }
 }
 
 .live {
+  height: 440px;
   background: rgba(0, 0, 0, 0.9);
 }
 
 .live-visual {
-  background-color: #f6f6f6;
   width: 400px;
   height: 400px;
-  padding: 10px;
-  position: relative;
-  margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .live-visual {
-    width: 300px;
-    height: 300px;
+@media (min-width: 769px) {
+  .slideshow img {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border: 5px double #f6f6f6;
+  }
+  .slideshow {
+    padding-top: 20px;
+  }
+  .live-1 {
+    position: absolute;
+    left: 5%;
+  }
+  .live-2 {
+    position: absolute;
+    left: 20%;
+  }
+  .live-3 {
+    position: absolute;
+    left: 40%;
+  }
+  .live-4 {
+    position: absolute;
+    right: 5%;
+  }
+  .live-5 {
+    position: absolute;
+    right: 20%;
+  }
+  .live-6 {
+    position: absolute;
+    right: 40%;
   }
 }
 
-.slideshow img {
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  border: 5px dashed #f6f6f6;
+@media (max-width: 768px) {
+  .live {
+    height: 300px;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .live-visual {
+    width: 240px;
+    height: 240px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .slideshow img {
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    object-fit: cover;
+    border: 5px dashed #f6f6f6;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .slideshow img {
     width: 100%;
     height: 100%;

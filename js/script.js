@@ -35,7 +35,7 @@ $(function(){
 
   function changePage(){
     $("#slideshow img").fadeOut(1000);
-    $("#slideshow img").eq(page).fadeIn(2000);
+    $("#slideshow img").eq(page).fadeIn(1000);
   };
 
   var Timer;
@@ -48,7 +48,7 @@ $(function(){
         page ++;
         changePage();
           };
-            },3000);
+            },2000);
   }  startTimer();
 
 
