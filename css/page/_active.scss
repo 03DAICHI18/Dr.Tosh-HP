@@ -1,0 +1,46 @@
+.active {
+  padding: 48px 0;
+  background: rgba($color: #dfdfdf, $alpha: .9);
+
+  .active-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 48px;
+  }
+
+  video {
+    width:77vw; 
+    max-width: 720px;
+    height: 50vw;
+    max-height: 480px;
+    @include sp {
+      min-width: 300px;
+      min-height: 170px;
+    }
+  }
+  iframe {
+    width:77vw; 
+    max-width: 720px;
+    height: 50vw;
+    max-height: 480px;
+    @include sp {
+      min-width: 300px;
+      min-height: 170px;
+    }
+  }
+}
+
+.active-content {
+  margin:  0 auto;
+  text-align: center;
+  p {
+    padding-bottom: 10px;
+  }
+}
+
+.yt {
+  margin-top: 20px;
+  p {
+    margin: 5vw 0 2.5vw 0;
+  }
+}

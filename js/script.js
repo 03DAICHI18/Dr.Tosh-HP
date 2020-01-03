@@ -26,6 +26,7 @@ $(function(){
   window.removeEventListener( 'touchmove' , movefun, { passive: false } );
   });
 
+
 // liveスライドイメージ====================================
   var page=0;
   var lastPage =parseInt($("#slideshow img").length-1);
@@ -37,6 +38,19 @@ $(function(){
     $("#slideshow img").eq(page).fadeIn(1000);
   };
 
+  var Timer;
+function startTimer(){
+Timer =setInterval(function(){  
+  if(page === lastPage){
+    page = 0;
+    changePage();
+    } else {
+      page ++;
+      changePage();
+        };
+          },3000);
+}
+startTimer();
   
 });
 
