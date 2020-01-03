@@ -37,19 +37,7 @@ $(function(){
     $("#slideshow img").eq(page).fadeIn(1000);
   };
 
-  var Timer;
-  function startTimer(){
-  Timer =setInterval(function(){  
-    if(page === lastPage){
-      page = 0;
-      changePage();
-      } else {
-        page ++;
-        changePage();
-          };
-            },2000);
-  }  startTimer();
-
+  
 });
 
 // ↓load関数

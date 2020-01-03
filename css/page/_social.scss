@@ -1,0 +1,24 @@
+.social {
+  background: rgba($color: #dfdfdf, $alpha: .9);
+
+  video {
+    width:300px; 
+    height: 250px;
+
+  }
+  iframe {
+    width:300px; 
+    height: 250px;
+    margin-top: 0;
+  }
+}
+
+.social-content {
+  margin:  0 auto;
+  text-align: center;
+  padding: 20px 0;
+
+  p {
+    padding-bottom: 10px;
+  }
+}

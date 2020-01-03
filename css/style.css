@@ -524,7 +524,27 @@ body::before {
   }
 }
 
-.footer {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+.social {
+  background: rgba(223, 223, 223, 0.9);
+}
+
+.social video {
+  width: 300px;
+  height: 250px;
+}
+
+.social iframe {
+  width: 300px;
+  height: 250px;
+  margin-top: 0;
+}
+
+.social-content {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-content p {
+  padding-bottom: 10px;
 }
