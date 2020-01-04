@@ -1,0 +1,45 @@
+.footer {
+  position: relative;
+}
+
+.logo-wrap {
+  height: 100vh;
+  background-image: url(../img/Beard.png);
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-area {
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  top: calc(100vh - 240px);
+  text-align: center;
+  background-color: rgba($color: #000000, $alpha: .4);
+  color: #F5F5F5;
+  
+  .footer-text {
+    padding-top: 16px;
+    &__title {
+      font-size: 30px;
+    }
+    &__about {
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 2px;
+    }
+    a {
+      color: #F5F5F5;
+      text-decoration: underline;
+    }
+  }
+
+  .footer-copy {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    @include centertransform;
+  }
+}

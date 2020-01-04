@@ -359,15 +359,6 @@ body::before {
   background-repeat: no-repeat;
 }
 
-.logo-wrap {
-  height: 100vh;
-  background-image: url(../img/Beard.png);
-  background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .news {
   width: 100%;
   padding: 48px 32px;
@@ -608,4 +599,57 @@ body::before {
   text-align: center;
   padding: 48px 0;
   text-decoration: underline;
+}
+
+.footer {
+  position: relative;
+}
+
+.logo-wrap {
+  height: 100vh;
+  background-image: url(../img/Beard.png);
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-area {
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  top: calc(100vh - 240px);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #F5F5F5;
+}
+
+.footer-area .footer-text {
+  padding-top: 16px;
+}
+
+.footer-area .footer-text__title {
+  font-size: 30px;
+}
+
+.footer-area .footer-text__about {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 2px;
+}
+
+.footer-area .footer-text a {
+  color: #F5F5F5;
+  text-decoration: underline;
+}
+
+.footer-area .footer-copy {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
 }
