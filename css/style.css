@@ -101,7 +101,7 @@ body {
   position: absolute;
   content: '';
   width: 100%;
-  bottom: -8px;
+  bottom: -4px;
   left: 0;
   height: 0.1rem;
   background: #F5F5F5;
@@ -221,7 +221,7 @@ body::before {
 }
 
 .profile {
-  color: #F5F5F5;
+  color: #ffffff;
 }
 
 .profile-name {
@@ -582,7 +582,6 @@ body::before {
 
 .social {
   width: 100%;
-  height: 240px;
   padding: 48px 32px;
   background: rgba(0, 0, 0, 0.9);
   color: #F5F5F5;
@@ -592,4 +591,21 @@ body::before {
   text-align: center;
   font-size: 30px;
   margin-bottom: 48px;
+}
+
+.social-wrap {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icon a {
+  color: #F5F5F5;
+}
+
+.social-text {
+  text-align: center;
+  padding: 48px 0;
+  text-decoration: underline;
 }
