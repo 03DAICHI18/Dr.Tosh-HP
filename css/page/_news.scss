@@ -62,16 +62,16 @@
       }
 
       .td-event::before {
-        content: "events　: ";
+        content: "events　:　";
       }
       .td-place::before {
-        content: "place　: ";
+        content: "place　　:　";
       }
       .td-join {
         padding-bottom: 24px;
       }
       .td-join::before {
-        content: "join　: ";
+        content: "join　　:　";
       }
     }
   }

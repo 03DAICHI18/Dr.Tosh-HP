@@ -435,16 +435,16 @@ body::before {
     line-height: 1.5;
   }
   .news table .td-event::before {
-    content: "events　: ";
+    content: "events　:　";
   }
   .news table .td-place::before {
-    content: "place　: ";
+    content: "place　　:　";
   }
   .news table .td-join {
     padding-bottom: 24px;
   }
   .news table .td-join::before {
-    content: "join　: ";
+    content: "join　　:　";
   }
 }
 
