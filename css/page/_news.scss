@@ -13,24 +13,32 @@
   
   &__title {
     text-align: center;
-    padding: 20px;
+    padding: 24px;
     @include fontsize(30);
+  }
+
+  .td-place {
+    @include fontsize(14);
+  }
+  .td-join {
+    @include fontsize(14);
   }
 
     table {
       width: 100%;
       @include pc {
+      tr {
+        border-bottom:3px solid #333333;
+      }
       th {
         padding: 16px;
-        border: 1px solid #333333;
-        background: rgb(130, 130, 130);
       }
       td {
         padding: 16px;
         line-height: 1.5;
       }
 
-      .td-last {
+      .td-event {
         width: 40%;
       }
     }

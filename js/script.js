@@ -48,7 +48,7 @@ Timer =setInterval(function(){
       page ++;
       changePage();
         };
-          },3000);
+          },1500);
 }
 startTimer();
   

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+	<meta charset="UTF-8" />
+	<title>レスポンシブメールフォームのサンプル</title>
+	<meta name="robots" content="noindex,nofollow" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+	<style>
+	body {
+		font-family: 'Acme', sans-serif;
+		color: #454545;
+		background: #f0f0f0;
+	}
+	</style>
+	<link rel="stylesheet" href="css/mailform.css" />
+</head>
+<body>
+
+
+<form action="php/mailform.php" method="post" id="mail_form">
+	<h1 style="text-align: center; font-size: 30px;">Contact</h1>
+	<dl>
+		<dt>会社名<span>Company Name</span></dt>
+		<dd><input type="text" id="company" name="company" value="" /></dd>
+		
+		<dt>名前<span>Your Name</span></dt>
+		<dd class="required"><input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2" name="name_2" value="" /></dd>
+		
+		<dt>ふりがな<span>Name Reading</span></dt>
+		<dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" /></dd>
+		
+		<dt>メールアドレス<span>Mail Address</span></dt>
+		<dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
+		
+		<dt>メールアドレス<br />(確認用)<span>Mail Address Confirm</span></dt>
+		<dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd>
+
+		<dt>お問い合わせの内容<span>Contents</span></dt>
+		<dd class="required"><textarea id="contents" name="contents" cols="40" rows="5"></textarea></dd>
+		
+	</dl>
+	
+	<p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
+</form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="js/mailform-js.php"></script>
+
+<!-- フリガナ自動入力ライブラリここから -->
+<script src="js/jquery.autoKana.js"></script>
+<script>
+	(function( $ ) {
+		$.fn.autoKana( '#name_1', '#read_1', {
+			katakana: false
+		});
+		$.fn.autoKana( '#name_2', '#read_2', {
+			katakana: false
+		});
+	})( jQuery );
+</script>
+<!-- フリガナ自動入力ライブラリここまで -->
+
+
+</body>
+</html>
