@@ -180,7 +180,7 @@ body {
   }
   #drawer-menu .drawer-menu__hidden {
     width: 100%;
-    height: calc(100% / 6);
+    height: calc(100% / 7);
     z-index: 110;
     cursor: pointer;
   }
@@ -581,7 +581,7 @@ body::before {
 
 .social {
   width: 100%;
-  padding: 48px 32px;
+  padding: 50px 32px;
   background: rgba(0, 0, 0, 0.9);
   color: #F5F5F5;
 }
