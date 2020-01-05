@@ -185,9 +185,13 @@ body {
     cursor: pointer;
   }
   #drawer-menu .drawer-menu__hidden a {
-    display: block;
-    text-align: center;
+    width: 30%;
     padding-top: 30px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     color: #F5F5F5;
   }
 }
