@@ -639,7 +639,7 @@ body::before {
   }
   .logo-speech p {
     position: absolute;
-    top: 30%;
+    top: 28%;
     right: 30%;
     line-height: 32px;
   }
