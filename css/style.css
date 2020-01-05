@@ -155,15 +155,15 @@ body {
     top: 27px;
   }
   /* 最初のspanをマイナス45度に */
-  #drawer-btn.active span:nth-child(1) {
+  #drawer-btn.open span:nth-child(1) {
     top: 18px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
   /* 2番目と3番目のspanを45度に */
-  #drawer-btn.active span:nth-child(2),
-  #drawer-btn.active span:nth-child(3) {
+  #drawer-btn.open span:nth-child(2),
+  #drawer-btn.open span:nth-child(3) {
     top: 18px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -200,7 +200,7 @@ body {
   overflow: auto;
 }
 
-body.active {
+body.open {
   overflow: hidden;
 }
 
@@ -722,6 +722,7 @@ body::before {
 }
 
 .footer-area .footer-copy {
+  width: 100%;
   position: absolute;
   bottom: 10%;
   left: 50%;

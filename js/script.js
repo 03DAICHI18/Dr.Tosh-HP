@@ -7,12 +7,12 @@ $(function(){
 
 // ハンバーガーメニュー====================================
   $('#drawer-btn , .drawer-menu__hidden').on('click',function(){
-  $('#drawer-btn').toggleClass('active');
+  $('#drawer-btn').toggleClass('open');
 
-  if ($(this).hasClass('active')){
-    $('body , #drawer-btn').addClass('active');
+  if ($(this).hasClass('open')){
+    $('body , #drawer-btn').addClass('open');
   } else {
-    $('body , #drawer-btn').removeClass('active');
+    $('body , #drawer-btn').removeClass('open');
   }
 
   $('#drawer-menu').slideToggle();
