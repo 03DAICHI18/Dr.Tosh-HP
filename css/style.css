@@ -180,7 +180,7 @@ body {
   }
   #drawer-menu .drawer-menu__hidden {
     width: 100%;
-    height: calc(100% / 5);
+    height: calc(100% / 6);
     z-index: 110;
     cursor: pointer;
   }
