@@ -232,7 +232,7 @@ body::before {
   position: absolute;
   top: 20%;
   right: 5%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -258,12 +258,9 @@ body::before {
   }
 }
 
-.profile-text {
-  padding: 100vh 16px 128px 16px;
-}
-
 @media (min-width: 769px) {
   .profile-text {
+    padding: 100vh 16px 128px 16px;
     display: flex;
     flex-direction: row-reverse;
   }
@@ -271,6 +268,7 @@ body::before {
 
 @media (max-width: 768px) {
   .profile-text {
+    padding-top: 100vh;
     display: block;
     width: 100%;
     margin: 0 auto;
@@ -298,6 +296,8 @@ body::before {
 
 @media (max-width: 768px) {
   .profile-text .profile-text__about {
+    padding: 0 16px 32px;
+    background: rgba(0, 0, 0, 0.3);
     line-height: 1.5;
   }
   .profile-text .profile-text__about .profile-text__about--link a {
@@ -381,8 +381,8 @@ body::before {
 .news__title {
   text-align: center;
   padding: 24px;
-  font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .news .td-place {
@@ -411,7 +411,7 @@ body::before {
     line-height: 1.5;
   }
   .news table .td-event {
-    width: 40%;
+    width: 50%;
   }
 }
 
@@ -422,8 +422,9 @@ body::before {
 }
 
 @media (max-width: 768px) {
-  .news table tr {
-    border-bottom: 16px solid #828282;
+  .news table .td-time {
+    border-top: 3px solid #333333;
+    border-bottom: 3px solid #333333;
   }
   .news table th {
     display: none;
@@ -431,20 +432,31 @@ body::before {
   .news table td {
     display: block;
     width: 100%;
-    padding: 8px;
     line-height: 1.5;
   }
-  .news table .td-event::before {
-    content: "events　:　";
+  .news table .td-event-title {
+    display: inline-block;
+    padding-bottom: 16px;
   }
-  .news table .td-place::before {
-    content: "place　　:　";
+  .news table .td-place {
+    display: inline-block;
+    padding-bottom: 16px;
   }
   .news table .td-join {
-    padding-bottom: 24px;
+    display: block;
+    margin-bottom: 24px;
+  }
+  .news table .td-event::before {
+    content: "events:";
+    display: block;
+  }
+  .news table .td-place::before {
+    content: "place:";
+    display: block;
   }
   .news table .td-join::before {
-    content: "join　　:　";
+    content: "join:";
+    display: block;
   }
 }
 
@@ -666,7 +678,7 @@ body::before {
   }
 }
 
-@media (max-width: 450px) {
+@media (min-width: 401px) and (max-width: 450px) {
   .logo-speech {
     position: absolute;
     top: 10%;
@@ -674,6 +686,23 @@ body::before {
   }
   .logo-speech img {
     width: 200px;
+  }
+  .logo-speech p {
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-speech {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+  }
+  .logo-speech img {
+    width: 180px;
   }
   .logo-speech p {
     position: absolute;
@@ -731,4 +760,12 @@ body::before {
   -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
   -o-transform: translate(-50%);
+}
+
+.header {
+  height: 100vh;
+  background-image: url(../../img/harehare1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

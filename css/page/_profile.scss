@@ -9,7 +9,7 @@
   position: absolute;
   top: 20%;
   right: 5%;
-  background: rgba($color: #000000, $alpha: .5);
+  background: rgba($color: #000000, $alpha: .3);
   @include sp {
     width: 100%;
     position: absolute;
@@ -31,14 +31,14 @@
 
 
 .profile-text {
-  padding: 100vh 16px 128px 16px;
-
   @include pc {
+    padding: 100vh 16px 128px 16px;
     display: flex;
     flex-direction: row-reverse;
   }
 
   @include sp {
+    padding-top: 100vh;
     display: block;
     width: 100%;
     margin: 0 auto;
@@ -50,27 +50,29 @@
     text-align: center;
   }
 
-@include pc {
-  .profile-text__about {
-    width: 50%;
-    line-height: 1.5;
-    letter-spacing: 3px;
-    .profile-text__about--link a {
-      color: rgb(240, 110, 87);
-      font-size: 24px;
-      text-decoration: underline;
+  @include pc {
+    .profile-text__about {
+      width: 50%;
+      line-height: 1.5;
+      letter-spacing: 3px;
+      .profile-text__about--link a {
+        color: rgb(240, 110, 87);
+        font-size: 24px;
+        text-decoration: underline;
+      }
     }
   }
-}
-@include sp {
-  .profile-text__about {
-    line-height: 1.5;
-    .profile-text__about--link a {
-      color: rgb(240, 110, 87);
-      font-size: 20px;
+  @include sp {
+    .profile-text__about {
+      padding: 0 16px 32px;
+      background: rgba($color: #000000, $alpha: .3);
+      line-height: 1.5;
+      .profile-text__about--link a {
+        color: rgb(240, 110, 87);
+        font-size: 20px;
+      }
     }
   }
-}
 }
 
 

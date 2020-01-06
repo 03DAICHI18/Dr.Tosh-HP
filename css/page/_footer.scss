@@ -26,7 +26,7 @@
       line-height: 32px;
     }
   }
-  @media (min-width:451px) and ( max-width:768px) {
+  @media (min-width:451px) and (max-width:768px) {
     position: absolute;
     top: 10%;
     right: 0;
@@ -40,12 +40,26 @@
       line-height: 20px;
     }
   }
-  @media (max-width:450px){
+  @media (min-width:401px) and (max-width:450px){
     position: absolute;
     top: 10%;
     right: 0%;
     img {
       width: 200px;
+    }
+    p {
+      position: absolute;
+      top: 25%;
+      right: 20%;
+      line-height: 20px;
+    }
+  }
+  @media (max-width:400px){
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    img {
+      width: 180px;
     }
     p {
       position: absolute;

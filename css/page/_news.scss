@@ -14,7 +14,7 @@
   &__title {
     text-align: center;
     padding: 24px;
-    @include fontsize(30);
+    @include fontsize(24);
   }
 
   .td-place {
@@ -39,7 +39,7 @@
       }
 
       .td-event {
-        width: 40%;
+        width: 50%;
       }
     }
     @include pc {
@@ -47,9 +47,11 @@
         content: "［place］";
       }
     }
+    
     @include sp {
-      tr {
-        border-bottom: 16px solid rgb(130, 130, 130);
+      .td-time {
+        border-top: 3px solid #333333;
+        border-bottom: 3px solid #333333;
       }
       th {
         display: none;
@@ -57,21 +59,33 @@
       td {
         display: block;
         width: 100%;
-        padding: 8px;
         line-height: 1.5;
       }
-
-      .td-event::before {
-        content: "events　:　";
+      .td-event-title {
+        display: inline-block;
+        padding-bottom: 16px;
       }
-      .td-place::before {
-        content: "place　　:　";
+      .td-place {
+        display: inline-block;
+        padding-bottom: 16px;
       }
       .td-join {
-        padding-bottom: 24px;
+        display: block;
+        margin-bottom: 24px;
+      }
+      
+
+      .td-event::before {
+        content: "events:";
+        display: block;
+      }
+      .td-place::before {
+        content: "place:";
+        display: block;
       }
       .td-join::before {
-        content: "join　　:　";
+        content: "join:";
+        display: block;
       }
     }
   }
