@@ -1,6 +1,19 @@
 .haremusic {
   padding: 32px;
-  @include sp {
-    padding: 24px 16px;
+  margin:  0 auto;
+  @include pc {
+    width: 500px;
+    @include fontsize(16);
   }
+  @include sp {
+    width: 300px;
+    padding: 24px;
+  }
+
+}
+
+.haremusic__lyrics {
+  line-height: 1.5;
+  white-space: pre-line;
+  word-wrap: break-word;
 }
