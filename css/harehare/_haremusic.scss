@@ -1,0 +1,6 @@
+.haremusic {
+  padding: 32px;
+  @include sp {
+    padding: 24px 16px;
+  }
+}
