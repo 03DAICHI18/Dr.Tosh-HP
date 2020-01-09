@@ -16,14 +16,16 @@ body {
   }
 }
 
-body {
-  overflow: visible !important;
-  background-image: url(../../img/Pepsized_Blur_01.jpg);
-}
-
 .header {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background: -moz-radial-gradient(#FFF, #fff478 40%, #eb4823);
+  background: -webkit-radial-gradient(#FFF, #fff478 40%, #eb4823);
+  background: radial-gradient(#FFF, #fff478 40%, #eb4823);
 }
 
 .header img {
@@ -32,14 +34,14 @@ body {
 }
 
 .hareabout {
-  padding: 32px;
+  padding: 20vh 32px 20vh;
   display: flex;
   justify-content: center;
 }
 
 @media (max-width: 768px) {
   .hareabout {
-    padding: 24px 16px;
+    padding: 16px;
     flex-direction: column;
   }
 }
@@ -107,12 +109,13 @@ body {
 
 .haremusic {
   padding: 32px;
-  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
+  color: #0a0a0a;
 }
 
 @media (min-width: 769px) {
   .haremusic {
-    width: 500px;
     font-size: 16px;
     font-size: 1rem;
   }
@@ -120,8 +123,17 @@ body {
 
 @media (max-width: 768px) {
   .haremusic {
-    width: 300px;
+    font-size: 14px;
+    font-size: 0.875rem;
     padding: 24px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .haremusic {
+    margin: 0 auto;
+    width: 100%;
+    padding: 12px;
   }
 }
 
@@ -133,10 +145,30 @@ body {
 
 .harephoto {
   width: 100vw;
-  height: 100%;
 }
 
 .harephoto img {
   width: 100%;
   height: 100%;
+}
+
+.harefooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f5f5f5;
+}
+
+.hareback {
+  text-decoration: underline;
+}
+
+.hareback a {
+  color: #f5f5f5;
 }

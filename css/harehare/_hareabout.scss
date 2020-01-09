@@ -1,9 +1,9 @@
 .hareabout {
-  padding: 32px;
+  padding: 20vh 32px 20vh;
   display: flex;
   justify-content: center;
   @include sp {
-    padding: 24px 16px;
+    padding: 16px;
     flex-direction: column;
   }
 }
