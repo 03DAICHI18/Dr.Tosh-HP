@@ -8,6 +8,7 @@
   }
   @include sp {
     @include fontsize(14);
+    font-weight: 400;
     padding: 24px;
   }
   @media screen and (max-width:350px){
