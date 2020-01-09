@@ -5,11 +5,15 @@
   top: 0;
   left: 0;
   z-index: -10;
-  background: -moz-radial-gradient(#FFF, #fff478 40%, #eb4823);
-  background: -webkit-radial-gradient(#FFF, #fff478 40%, #eb4823);
-  background: radial-gradient(#FFF, #fff478 40%, #eb4823);
-  img {
-    width: 100%;
-    height: 100%;
+  background-image: url(../../img/harehare1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width:480px) {
+    background: -moz-radial-gradient(#FFF, #fff478 40%, #eb4823);
+    background: -webkit-radial-gradient(#FFF, #fff478 40%, #eb4823);
+    background: radial-gradient(#FFF, #fff478 40%, #eb4823);
   }
+
 }
