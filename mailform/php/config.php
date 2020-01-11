@@ -13,7 +13,7 @@ $rm_send_address[] = 'dr.tosh5777@ezweb.ne.jp';
 
 
 //【必須】 サンクスページのURL -- index.htmlからの相対パス、またはhttp://からの絶対パス --
-$rm_thanks_page_url = 'thanks.html';
+$rm_thanks_page_url = 'https://nagaitoshimitsu.com/mailform/thanks.html';
 
 
 
@@ -82,11 +82,11 @@ EOM;
 //【だいたい必須】 相手に届く自動返信メールの最後に付加される署名 -- EOMからEOM;までの間の文章を自由に変更してください。 --
 $rm_thanks_body_signature = <<<EOM
 
-この度はお問い合わせを頂き、重ねてお礼申し上げます。
+この度はお問い合わせを頂きありがとうございました！
 -----------------------------------------------------------------------------------
 
 　　Dr.Tosh／永井 利充
-　　Web Site URL : https://www.1-firststep.com
+　　Web Site URL : https://nagaitoshimitsu.com
 　　Facebook URL : https://www.facebook.com/tosh.nagai.1
 
 -----------------------------------------------------------------------------------
