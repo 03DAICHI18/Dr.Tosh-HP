@@ -357,7 +357,13 @@ body::before {
   .profile-text .profile-text__about .profile-text__about--link a {
     color: #f06e57;
     font-size: 20px;
+    text-decoration: underline;
   }
+}
+
+.profile-text__about--last {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .slideimg {
