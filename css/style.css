@@ -671,15 +671,20 @@ body::before {
 }
 
 .social-wrap {
-  width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
 
+@media (min-width: 769px) {
+  .social-wrap {
+    width: 480px;
+  }
+}
+
 @media (max-width: 768px) {
   .social-wrap {
-    width: 50%;
+    width: 60%;
   }
 }
 
