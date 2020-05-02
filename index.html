@@ -12,7 +12,7 @@
   <!-- SNS共通 -->
   <meta property="og:url" content="https://nagaitoshimitsu.com" />
   <meta property="og:title" content="【 Dr.Tosh / 永井利充 】オフィシャルサイト" />
-  <meta property="og:image" content="https://nagaitoshimitsu.com/img/selfphoto1.jpg" />
+  <meta property="og:image" content="https://nagaitoshimitsu.com/img/selfphoto1ogp.jpg" />
   <meta property="og:site_name" content="【 Dr.Tosh / 永井利充 】オフィシャルサイト" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
@@ -69,13 +69,11 @@
               <li class="drawer-menu__hidden"><a href="#footer">Footer</a></li>
             </ul>
           </nav>
-            <button>
               <div id="drawer-btn">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
-            </button>
         </div>
       </div>
       <!-- スクロール誘導 -->
@@ -184,7 +182,7 @@
       <section>
         <div class="live">
           <div class="live-visual">
-            <ul id="slideshow" class="slideshow">
+            <ul class="slideshow">
                 <li class="live-8"><img src="img/livephoto9.jpg" alt="Live画像"></li>
                 <li class="live-9"><img src="img/livephoto10.jpg" alt="Live画像"></li>
                 <li class="live-1"><img src="img/livephoto1.jpg" alt="Live画像"></li>
@@ -195,6 +193,17 @@
                 <li class="live-6"><img src="img/livephoto7.jpg" alt="Live画像"></li>
                 <li class="live-7"><img src="img/livephoto8.jpg" alt="Live画像"></li>
             </ul>
+            <ul class="slideshow">
+              <li class="live-8"><img src="img/livephoto9.jpg" alt="Live画像"></li>
+              <li class="live-9"><img src="img/livephoto10.jpg" alt="Live画像"></li>
+              <li class="live-1"><img src="img/livephoto1.jpg" alt="Live画像"></li>
+              <li class="live-2"><img src="img/livephoto2.jpg" alt="Live画像"></li>
+              <li class="live-3"><img src="img/livephoto3.jpg" alt="Live画像"></li>
+              <li class="live-4"><img src="img/livephoto5.jpg" alt="Live画像"></li>
+              <li class="live-5"><img src="img/livephoto6.jpg" alt="Live画像"></li>
+              <li class="live-6"><img src="img/livephoto7.jpg" alt="Live画像"></li>
+              <li class="live-7"><img src="img/livephoto8.jpg" alt="Live画像"></li>
+          </ul>
         </div> 
         </div>
       </section>
@@ -203,13 +212,18 @@
       <section>
         <div id="active" class="active">
           <h2 class="active-title">Active</h2>
-          <div class="active-content">
+          <!-- 動画ファイル：一時的に読み込み削除 -->
+          <!-- <div class="active-content">
             <h3>〜PR Movie〜</h3>
               <video src="img/prmovie.mp4" poster="img/moviecapture.jpg" controls preload="none"></video>
+          </div> -->
+          <div class="active-content">
+            <h3>〜Spotify〜</h3>
+            <iframe class="contents" src="https://open.spotify.com/embed/artist/3B3Qe8WEATDVh8xkceXtNP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </div>
-          <div class="active-content yt">
+          <div class="active-content">
             <h3>〜Youtube〜</h3>
-              <iframe src="https://www.youtube.com/embed/Y7sd9AIv2SM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="contents" src="https://www.youtube.com/embed/Y7sd9AIv2SM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </section>

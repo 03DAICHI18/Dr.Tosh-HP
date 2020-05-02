@@ -9,20 +9,23 @@
   }
 
   video {
-    width:77vw; 
+    width: 77vw;
     max-width: 720px;
     height: 50vw;
     max-height: 480px;
+
     @include sp {
       min-width: 300px;
       min-height: 170px;
     }
   }
+
   iframe {
-    width:77vw; 
+    width: 77vw;
     max-width: 720px;
     height: 50vw;
     max-height: 480px;
+
     @include sp {
       min-width: 300px;
       min-height: 170px;
@@ -31,15 +34,17 @@
 }
 
 .active-content {
-  margin:  0 auto;
+  margin: 0 auto 24px;
   text-align: center;
+
   p {
     padding-bottom: 10px;
   }
 }
 
-.yt {
+.contents {
   margin-top: 20px;
+
   p {
     margin: 5vw 0 2.5vw 0;
   }
