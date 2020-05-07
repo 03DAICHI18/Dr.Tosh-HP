@@ -520,6 +520,40 @@ body::before {
   }
 }
 
+.news__text {
+  line-height: 1.5;
+}
+
+.news__box {
+  background-color: #dfdfdf;
+  border: 2px solid #504f4f;
+  border-radius: 5px;
+  margin: 40px 5px 5px 20px;
+  padding: 10px 20px 20px 20px;
+  position: relative;
+}
+
+.news__box::before {
+  background-color: #333333;
+  border-radius: 5px;
+  color: #fff;
+  content: 'Dr.Tosh永井利充より';
+  padding: 5px 20px;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+}
+
+.news__box-text {
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+.news__past {
+  margin-top: 24px;
+  text-align: center;
+}
+
 .live {
   height: 440px;
   background: rgba(0, 0, 0, 0.9);
@@ -801,6 +835,53 @@ body::before {
 }
 
 .footer-area .footer-copy {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+.footer-area__past {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #F5F5F5;
+}
+
+@media (max-width: 768px) {
+  .footer-area__past {
+    height: 200px;
+  }
+}
+
+.footer-area__past .footer-text {
+  padding-top: 16px;
+}
+
+.footer-area__past .footer-text__title {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.footer-area__past .footer-text__about {
+  padding-top: 8px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.footer-area__past .footer-text a {
+  color: #F5F5F5;
+  text-decoration: underline;
+}
+
+.footer-area__past .footer-copy {
   width: 100%;
   position: absolute;
   bottom: 10%;

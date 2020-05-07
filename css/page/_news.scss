@@ -3,14 +3,16 @@
   padding: 48px 32px;
   background: rgba($color: #dfdfdf, $alpha: .9);
   color: #333333;
+
   a {
     color: #333333;
     text-decoration: underline;
   }
+
   @include sp {
     padding: 32px 16px;
   }
-  
+
   &__title {
     text-align: center;
     padding: 24px;
@@ -20,19 +22,23 @@
   .td-place {
     @include fontsize(14);
   }
+
   .td-join {
     @include fontsize(14);
   }
 
-    table {
-      width: 100%;
-      @include pc {
+  table {
+    width: 100%;
+
+    @include pc {
       tr {
-        border-bottom:3px solid #333333;
+        border-bottom: 3px solid #333333;
       }
+
       th {
         padding: 16px;
       }
+
       td {
         padding: 16px;
         line-height: 1.5;
@@ -42,54 +48,94 @@
         width: 50%;
       }
     }
+
     @include pc {
       .td-place::before {
         content: "［place］";
       }
     }
-    
+
     @include sp {
       .td-time {
         border-top: 3px solid #333333;
         border-bottom: 3px solid #333333;
       }
+
       th {
         display: none;
       }
+
       td {
         display: block;
         width: 100%;
         line-height: 1.5;
       }
+
       .td-event-title {
         display: inline-block;
         padding-bottom: 16px;
       }
+
       .td-place {
         display: inline-block;
         padding-bottom: 16px;
       }
+
       .td-join {
         display: block;
         margin-bottom: 24px;
       }
-      
+
 
       .td-event::before {
         content: "events:";
         display: block;
       }
+
       .td-place::before {
         content: "place:";
         display: block;
       }
+
       .td-join::before {
         content: "join:";
         display: block;
       }
     }
   }
-
 }
 
-  
+.news__text {
+  line-height: 1.5;
+}
+
+.news__box {
+  background-color: #dfdfdf;
+  border: 2px solid #504f4f;
+  border-radius: 5px;
+  margin: 40px 5px 5px 20px;
+  padding: 10px 20px 20px 20px;
+  position: relative;
+}
+
+.news__box::before {
+  background-color: #333333;
+  border-radius: 5px;
+  color: #fff;
+  content: 'Dr.Tosh永井利充より';
+  padding: 5px 20px;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+}
+
+
+.news__box-text {
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+.news__past {
+  margin-top: 24px;
+  text-align: center;
+}
