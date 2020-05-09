@@ -287,6 +287,7 @@ body::before {
   top: 20%;
   right: 5%;
   background: rgba(0, 0, 0, 0.3);
+  white-space: pre-line;
 }
 
 @media (max-width: 768px) {
