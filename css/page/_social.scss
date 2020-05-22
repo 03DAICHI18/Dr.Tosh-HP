@@ -16,9 +16,11 @@
   @include pc {
     width: 480px;
   }
+
   @include sp {
     width: 60%;
   }
+
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
