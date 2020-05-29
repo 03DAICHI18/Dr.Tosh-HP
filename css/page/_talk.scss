@@ -1,0 +1,12 @@
+.talk {
+  width: 100%;
+  padding: 48px 32px;
+  background: rgba($color: #dfdfdf, $alpha: .9);
+  color: #333333;
+}
+
+.taik-title {
+  text-align: center;
+  padding: 24px;
+  @include fontsize(24);
+}
