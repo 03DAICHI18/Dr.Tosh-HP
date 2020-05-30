@@ -35,25 +35,45 @@ $(function () {
     $("body,html").animate({ scrollTop: position }, 500);
     return false;
   });
+});
 
-  // アコーディオンインナーを画面サイズで表示切替====================================
-  // クリックイベントを設定
-  $('.js-talk-trigger').click(function () {
-    // activeクラスを付与して三checkをcloseに
-    $(this).toggleClass('open');
-    // クリックした次の要素のインナーをスライドで表示
-    $(this).next().slideToggle();
-    // クリックされてないjs-talk-triggerの直下にあるインナーはスライドアップで非表示
-    $('.js-talk-trigger').not($(this)).next('.js-talk__inner').slideUp();
-    // クリックされてないjs-talk-triggerからactiveクラスを外しcheckの文字を元に戻す
-    $('.js-talk-trigger').not($(this)).removeClass('open');
-    return false;
+// アコーディオンインナーを画面サイズで表示切替====================================
+// scrollTop取得元の設定
+var userAgent = window.navigator.userAgent.toLowerCase()
+var scrollBody = 'body';
+if (userAgent.indexOf('msie') > -1 || userAgent.indexOf('trident') > -1 || userAgent.indexOf("firefox") > -1) { /*IE8.9.10.31*/
+  var scrollBody = 'html';
+}
+$(function () {
+  $window = $(window);
+  //アコーディオンメニューの実装
+  $(".js-talk-trigger").click(function () {
+    var $thisElm = $(this),
+      $activeElm = $(".js-talk-trigger.open"),
+      currentScrollTop = $window.scrollTop(),
+      posTop = $thisElm.offset().top,
+      currentPosTop = posTop;
+
+    if (!($thisElm.hasClass("open"))) {
+      $thisElm.addClass("open");
+      $thisElm.next().slideDown({
+        step: function () { //各ステップごとに、移動分スクロールさせる
+          currentPosTop = $thisElm.offset().top;
+          $(scrollBody).animate({
+            "scrollTop": currentScrollTop - (posTop - currentPosTop - 50) //スクロールを実行
+          }, 0);
+        }
+      });
+    }
+    $activeElm.removeClass("open");
+    $activeElm.next().slideUp();
   });
+
   $('.js-talk-close').click(function () {
     // クリックされてないjs-talk-triggerの直下にあるインナーはスライドアップで非表示
     $('.js-talk-trigger').not($(this)).next('.js-talk__inner').slideUp();
+    return false;
   });
-
 });
 
 // ↓load関数

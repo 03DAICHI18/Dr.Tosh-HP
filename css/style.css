@@ -3,6 +3,11 @@ body {
   font-family: 'Acme', sans-serif;
 }
 
+a {
+  color: #7b8eea;
+  text-decoration: underline;
+}
+
 @media (min-width: 769px) {
   :root {
     font-size: 20px;
@@ -428,11 +433,6 @@ body::before {
   color: #333333;
 }
 
-.news a {
-  color: #7b8eea;
-  text-decoration: underline;
-}
-
 @media (max-width: 768px) {
   .news {
     padding: 32px 16px;
@@ -545,6 +545,11 @@ body::before {
     content: "join:";
     display: block;
   }
+}
+
+.news-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .news__text {
