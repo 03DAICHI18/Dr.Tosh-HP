@@ -47,14 +47,10 @@ $(function () {
     $('.js-talk-trigger').not($(this)).next('.js-talk__inner').slideUp();
     // クリックされてないjs-talk-triggerからactiveクラスを外しcheckの文字を元に戻す
     $('.js-talk-trigger').not($(this)).removeClass('open');
-    //これを書かないと親要素に伝播してウィンドウ幅を広げたあと戻すとアコーディオンが機能しないので記述
-    return false;
   });
   $('.js-talk-close').click(function () {
     // クリックされてないjs-talk-triggerの直下にあるインナーはスライドアップで非表示
     $('.js-talk-trigger').not($(this)).next('.js-talk__inner').slideUp();
-    //これを書かないと親要素に伝播してウィンドウ幅を広げたあと戻すとアコーディオンが機能しないので記述
-    return false;
   });
 
 });
