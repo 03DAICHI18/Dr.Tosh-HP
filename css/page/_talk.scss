@@ -1,12 +1,112 @@
 .talk {
   width: 100%;
-  padding: 48px 32px;
-  background: rgba($color: #dfdfdf, $alpha: .9);
-  color: #333333;
+  padding: 48px 16px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #e1e1e1;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
-.taik-title {
+.talk-title {
   text-align: center;
   padding: 24px;
   @include fontsize(24);
+  font-size: bold;
+}
+
+.talk-heading {
+  display: inline-block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.talk-heading::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f130";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+
+.talk-content {
+  margin-bottom: 32px;
+}
+
+.talk-contents {
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+  position: relative;
+  letter-spacing: 1.5;
+  line-height: 1.5em;
+  background: #c7c6c6;
+  color: #333333;
+  border-radius: 20px;
+}
+
+.talk-contents::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -8px;
+  left: -40px;
+  border: 16px solid transparent;
+  border-right: 40px solid #c7c6c6;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.talk-contents p {
+  margin-bottom: 1em;
+}
+
+.talk-contents__pre {
+  width: 100%;
+  white-space: pre-line;
+}
+
+.talk-close {
+  width: 50%;
+  margin: 32px auto 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.talk-close__btn {
+  width: 100%;
+  padding: 8px 16px;
+  background: rgba(94, 94, 94, 0.5);
+  border-radius: 10%;
+  cursor: pointer;
+  border: none;
+}
+
+@include sp {
+  .talk-heading {
+    text-align: left;
+  }
+
+  .talk-contents {
+    width: 90%;
+  }
+
+}
+
+/* ↓↓↓↓アコーディオンの重要な装飾↓↓↓↓ */
+/* jQueryでactiveクラスを追加させる。その時に表示させる上向き三角。 */
+.js-talk-trigger::after {
+  content: ">check";
+  font-weight: 900;
+  padding-left: 10px;
+}
+
+.js-talk-trigger.open:after {
+  content: ">close";
+  font-weight: 900;
+  padding-left: 10px;
 }
