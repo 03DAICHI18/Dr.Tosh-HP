@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #7b8eea;
+  color: #0366D6;
   text-decoration: underline;
 }
 
@@ -100,6 +100,7 @@ a {
 .pc-header__list a {
   color: #F5F5F5;
   position: relative;
+  text-decoration: none;
 }
 
 .pc-header__list a::after {
@@ -198,6 +199,7 @@ a {
     left: 50%;
     transform: translateX(-50%);
     color: #F5F5F5;
+    text-decoration: none;
   }
 }
 
@@ -318,6 +320,10 @@ body::before {
   }
 }
 
+.profile-text p {
+  padding-bottom: 2em;
+}
+
 @media (min-width: 769px) {
   .profile-text {
     padding: 100vh 16px 128px 16px;
@@ -346,10 +352,11 @@ body::before {
     width: 50%;
     line-height: 1.5;
     letter-spacing: 3px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.3);
   }
   .profile-text .profile-text__about .profile-text__about--link a {
-    color: #f06e57;
-    font-size: 24px;
+    color: #9ebcf5;
     text-decoration: underline;
   }
 }
@@ -361,15 +368,64 @@ body::before {
     line-height: 1.5;
   }
   .profile-text .profile-text__about .profile-text__about--link a {
-    color: #f06e57;
-    font-size: 20px;
+    color: #9ebcf5;
     text-decoration: underline;
   }
 }
 
+/* 下層ページ */
+@media (min-width: 769px) {
+  .profile-text--lower {
+    padding: 50vh 32px 32px 32px;
+    background: rgba(0, 0, 0, 0.3);
+    line-height: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-text--lower {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 80px 8px;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 769px) {
+  .profile-text--lower .profile-text__about {
+    width: 50%;
+    line-height: 1.5;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-text--lower .profile-text__about {
+    padding: 0 16px 32px;
+    background: rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+  }
+}
+
+.profile-text--lower p {
+  padding-bottom: 2em;
+}
+
+.profile-text__about-detail {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.profile-text__about-detail a {
+  color: #9ebcf5;
+}
+
 .profile-text__about--last {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 16px;
+}
+
+.profile-text__about--last a {
+  color: #9ebcf5;
 }
 
 .slideimg {

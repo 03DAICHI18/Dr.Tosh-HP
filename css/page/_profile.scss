@@ -11,6 +11,7 @@
   right: 5%;
   background: rgba($color: #000000, $alpha: .3);
   white-space: pre-line;
+
   @include sp {
     width: 100%;
     position: absolute;
@@ -20,18 +21,23 @@
   }
 
   &__inner {
-  width: 100%;
-  font-size: 2.5vw;
-  line-height: 2;
-  letter-spacing: 8px;
-  @include sp {
-    font-size: 20px;
-  }
+    width: 100%;
+    font-size: 2.5vw;
+    line-height: 2;
+    letter-spacing: 8px;
+
+    @include sp {
+      font-size: 20px;
+    }
   }
 }
 
 
 .profile-text {
+  p {
+    padding-bottom: 2em;
+  }
+
   @include pc {
     padding: 100vh 16px 128px 16px;
     display: flex;
@@ -56,31 +62,81 @@
       width: 50%;
       line-height: 1.5;
       letter-spacing: 3px;
+      padding: 16px;
+      background: rgba($color: #000000, $alpha: .3);
+
       .profile-text__about--link a {
-        color: rgb(240, 110, 87);
-        font-size: 24px;
+        color: rgb(158, 188, 245);
         text-decoration: underline;
       }
     }
   }
+
   @include sp {
     .profile-text__about {
       padding: 0 16px 32px;
       background: rgba($color: #000000, $alpha: .3);
       line-height: 1.5;
+
       .profile-text__about--link a {
-        color: rgb(240, 110, 87);
-        font-size: 20px;
+        color: rgb(158, 188, 245);
         text-decoration: underline;
       }
     }
   }
 }
 
-.profile-text__about--last {
-  text-align: center;
-  margin-top: 10px;
+/* 下層ページ */
+.profile-text--lower {
+  @include pc {
+    padding: 50vh 32px 32px 32px;
+    background: rgba($color: #000000, $alpha: .3);
+    line-height: 1.5em;
+  }
+
+  @include sp {
+    background: rgba($color: #000000, $alpha: .3);
+    padding: 80px 8px;
+    line-height: 1.5em;
+  }
+
+  @include pc {
+    .profile-text__about {
+      width: 50%;
+      line-height: 1.5;
+      letter-spacing: 3px;
+
+    }
+  }
+
+  @include sp {
+    .profile-text__about {
+      padding: 0 16px 32px;
+      background: rgba($color: #000000, $alpha: .3);
+      line-height: 1.5;
+
+    }
+  }
 }
 
+.profile-text--lower p {
+  padding-bottom: 2em;
+}
 
+.profile-text__about-detail {
+  margin-top: 16px;
+  text-align: center;
+}
 
+.profile-text__about-detail a {
+  color: rgb(158, 188, 245);
+}
+
+.profile-text__about--last {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.profile-text__about--last a {
+  color: rgb(158, 188, 245);
+}
