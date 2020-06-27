@@ -1,6 +1,6 @@
 .active {
   padding: 48px 0;
-  background: rgba($color: #dfdfdf, $alpha: .9);
+  background: rgba($color: #ffffff, $alpha: .9);
 
   .active-title {
     text-align: center;
@@ -47,5 +47,11 @@
 
   p {
     margin: 5vw 0 2.5vw 0;
+  }
+}
+
+@include sp {
+  .active {
+    padding: 0 0 24px 0;
   }
 }

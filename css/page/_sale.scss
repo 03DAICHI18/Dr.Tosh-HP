@@ -1,0 +1,69 @@
+.sale {
+  width: 50%;
+  padding: 48px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333333;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+@include sp {
+  .sale {
+    width: 100%;
+    padding: 24px 8px;
+  }
+}
+
+.sale-subtitle {
+  @include fontsize(14);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.sale-subtitle::before,
+.sale-subtitle::after {
+  content: "-";
+  padding-right: 4px;
+}
+
+.sale-logo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.sale-logo a img {
+  width: 100%;
+  transition: all .5s;
+}
+
+@include sp {
+  .sale-logo {
+    width: 70%;
+  }
+
+  .sale-logo a img {
+    width: 100%;
+  }
+}
+
+.sale-logo a img:hover {
+  opacity: .8;
+}
+
+.sale-text {
+  margin-top: 16px;
+  padding: 16px;
+  line-height: 1.3em;
+}
+
+.sale-link {
+  text-align: center;
+}
+
+.sale-link::before {
+  content: ">";
+  padding-right: 4px;
+}

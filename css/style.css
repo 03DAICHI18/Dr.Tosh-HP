@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #0366D6;
+  color: #5fa1ed;
   text-decoration: underline;
 }
 
@@ -19,6 +19,25 @@ a {
   :root {
     font-size: 16px;
     font-size: 1rem;
+  }
+}
+
+.section-title {
+  text-align: center;
+  padding: 24px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-size: bold;
+}
+
+.contentwrap {
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  .contentwrap {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -485,7 +504,7 @@ body::before {
 .news {
   width: 100%;
   padding: 48px 32px;
-  background: rgba(223, 223, 223, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   color: #333333;
 }
 
@@ -519,13 +538,6 @@ body::before {
     width: 100%;
     height: 100%;
   }
-}
-
-.news__title {
-  text-align: center;
-  padding: 24px;
-  font-size: 24px;
-  font-size: 1.5rem;
 }
 
 .news .td-place {
@@ -711,15 +723,91 @@ body::before {
   }
 }
 
-.talk {
-  width: 100%;
+.sale {
+  width: 50%;
   padding: 48px 16px;
-  background: rgba(0, 0, 0, 0.9);
-  color: #e1e1e1;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333333;
+}
+
+.sale a {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .sale {
+    width: 100%;
+    padding: 24px 8px;
+  }
+}
+
+.sale-subtitle {
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.sale-subtitle::before,
+.sale-subtitle::after {
+  content: "-";
+  padding-right: 4px;
+}
+
+.sale-logo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.sale-logo a img {
+  width: 100%;
+  transition: all .5s;
+}
+
+@media (max-width: 768px) {
+  .sale-logo {
+    width: 70%;
+  }
+  .sale-logo a img {
+    width: 100%;
+  }
+}
+
+.sale-logo a img:hover {
+  opacity: .8;
+}
+
+.sale-text {
+  margin-top: 16px;
+  padding: 16px;
+  line-height: 1.3em;
+}
+
+.sale-link {
+  text-align: center;
+}
+
+.sale-link::before {
+  content: ">";
+  padding-right: 4px;
+}
+
+.talk {
+  width: 50%;
+  padding: 48px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333333;
 }
 
 .talk a {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .talk {
+    padding: 24px 8px;
+    width: 100%;
+  }
 }
 
 .talk-title {
@@ -732,7 +820,7 @@ body::before {
 
 .talk-heading {
   display: inline-block;
-  text-align: center;
+  text-align: left;
   padding: 16px;
   text-decoration: underline;
   cursor: pointer;
@@ -793,8 +881,8 @@ body::before {
 .talk-close__btn {
   width: 100%;
   padding: 8px 16px;
-  background: rgba(0, 0, 0, 0.9);
-  color: #e1e1e1;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333333;
   border-radius: 10%;
   cursor: pointer;
   border: none;
@@ -825,7 +913,7 @@ body::before {
 
 .active {
   padding: 48px 0;
-  background: rgba(223, 223, 223, 0.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .active .active-title {
@@ -879,10 +967,15 @@ body::before {
   margin: 5vw 0 2.5vw 0;
 }
 
+@media (max-width: 768px) {
+  .active {
+    padding: 0 0 24px 0;
+  }
+}
+
 .social {
   width: 100%;
-  height: 400px;
-  padding: 50px 32px;
+  padding: 50px 32px 74px;
   background: rgba(0, 0, 0, 0.9);
   color: #e1e1e1;
 }
@@ -914,11 +1007,6 @@ body::before {
 
 .social-icon a {
   color: #F5F5F5;
-}
-
-.contact {
-  padding-top: 48px;
-  text-align: center;
 }
 
 .footer {
@@ -1021,15 +1109,17 @@ body::before {
 }
 
 .footer-area .footer-text {
-  padding-top: 16px;
+  padding-top: 24px;
 }
 
 .footer-area .footer-text__title {
+  padding: 8px 0;
   font-size: 24px;
   font-size: 1.5rem;
 }
 
 .footer-area .footer-text__about {
+  text-align: left;
   padding-top: 8px;
   line-height: 1;
   letter-spacing: 2px;
@@ -1050,6 +1140,27 @@ body::before {
   -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
   -o-transform: translate(-50%);
+}
+
+.footer-area__inner {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .footer-area__inner {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .footer-area__inner {
+    width: 100%;
+  }
 }
 
 .footer-area__past {
@@ -1097,4 +1208,9 @@ body::before {
   -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
   -o-transform: translate(-50%);
+}
+
+.contact {
+  padding-top: 24px;
+  text-align: center;
 }

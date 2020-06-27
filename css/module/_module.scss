@@ -1,0 +1,18 @@
+.section-title {
+  text-align: center;
+  padding: 24px;
+  @include fontsize(24);
+  font-size: bold;
+}
+
+// saleからtalkまでのセクション
+.contentwrap {
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  .contentwrap {
+    display: flex;
+    flex-direction: column;
+  }
+}

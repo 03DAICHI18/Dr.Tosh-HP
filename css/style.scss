@@ -6,6 +6,9 @@
 @import "./mixin/fontsize";
 @import "./mixin/center";
 
+// ==================module==================
+@import "./module/module";
+
 // ==================page==================
 @import "./page/_load";
 @import "./page/header";
@@ -14,6 +17,7 @@
 @import "./page/slideimg";
 @import "./page/news";
 @import "./page/live";
+@import "./page/_sale";
 @import "./page/talk";
 @import "./page/active";
 @import "./page/social";
