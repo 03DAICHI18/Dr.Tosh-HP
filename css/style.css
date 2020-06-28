@@ -950,12 +950,24 @@ body::before {
   }
 }
 
-.talk-content__Underlayer {
+.talk-content__underlayer {
   padding: 80px 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.talk-heading__Underlaye {
+.talk-heading__underlaye {
+  color: #eaeaea;
+  text-decoration: none;
+  cursor: none;
+}
+
+.talk-link__underlaye-top {
+  margin-top: 32px;
+  text-align: center;
+  color: #eaeaea;
+}
+
+.talk-link__underlaye-top a {
   color: #eaeaea;
 }
 
