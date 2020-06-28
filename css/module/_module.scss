@@ -1,17 +1,55 @@
 .section-title {
-  text-align: center;
+  text-align: left;
   padding: 24px;
-  @include fontsize(24);
+  @include fontsize(30);
   font-size: bold;
 }
 
-// saleからtalkまでのセクション
-.contentwrap {
-  display: flex;
+@include sp {
+  .section-title {
+    @include fontsize(24);
+    text-align: center;
+  }
 }
 
-@media screen and (max-width: 480px) {
-  .contentwrap {
+// saleからactiveまでのセクション
+.contentwrap {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+
+  h2,
+  h3,
+  p,
+  a {
+    color: #F5F5F5;
+  }
+}
+
+.contentwrap-inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 600px) {
+  .contentwrap-inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contentwrap-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include sp {
+  .contentwrap-top {
     display: flex;
     flex-direction: column;
   }

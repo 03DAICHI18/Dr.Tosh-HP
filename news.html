@@ -29,15 +29,9 @@
   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css" />
 </head>
 
 <body>
-  <div class="load">
-    <div class="load__animation">Now Loading...</div>
-    <img src="img/beard-load.png" alt="ローディング画像" />
-  </div>
-
   <div id="wrap">
     <!-- ---------- ヘッダー ---------- -->
     <header id="top">
@@ -47,6 +41,8 @@
             <li class="pc-header__list"><a href="./index.html">Top</a></li>
             <li class="pc-header__list"><a href="./index.html#profile">Profile</a></li>
             <li class="pc-header__list"><a href="./index.html#news">News</a></li>
+            <li class="pc-header__list"><a href="./index.html#sale">Sale</a></li>
+            <li class="pc-header__list"><a href="./index.html#talk">talk</a></li>
             <li class="pc-header__list"><a href="./index.html#active">Active</a></li>
             <li class="pc-header__list"><a href="./index.html#social">Social</a></li>
             <li class="pc-header__list"><a href="./index.html#footer">Footer</a></li>
@@ -61,23 +57,25 @@
               <li class="drawer-menu__hidden"><a href="index.html#top">Top</a></li>
               <li class="drawer-menu__hidden"><a href="index.html#profile">Profile</a></li>
               <li class="drawer-menu__hidden"><a href="index.html#news">News</a></li>
+              <li class="drawer-menu__hidden"><a href="index.html#sale">Sale</a></li>
+              <li class="drawer-menu__hidden"><a href="index.html#talk">Talk</a></li>
               <li class="drawer-menu__hidden"><a href="index.html#active">Active</a></li>
               <li class="drawer-menu__hidden"><a href="index.html#social">Social</a></li>
               <li class="drawer-menu__hidden"><a href="index.html#footer">Footer</a></li>
             </ul>
           </nav>
           <div id="drawer-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span style="background-color: #2e2626;"></span>
+            <span style="background-color: #2e2626;"></span>
+            <span style="background-color: #2e2626;"></span>
           </div>
         </div>
       </div>
     </header>
     <!-- ---------- ニュース ---------- -->
     <section>
-      <div id="news" class="news">
-        <h2 class="news__title">過去イベント一覧</h2>
+      <div id="news" class="news" style="padding-top: 80px;">
+        <h2 class="news__title" style="padding: 16px 0;">過去イベント一覧</h2>
         <table cellpadding="6" cellspacing="5">
           <tr>
             <th>Time</th>
@@ -138,28 +136,45 @@
             <td class="td-join">Hare Hare , ラキタ</td>
           </tr>
         </table>
-        <p style="text-align: center; margin: 40px 0 16px; font-size: 24px;"><a href="index.html#news">Back to page</a></p>
+        <p style="text-align: center; margin: 40px 0 16px; font-size: 24px;"><a href="index.html#news">topページへ戻る
+          </a></p>
       </div>
     </section>
 
     <!-- ---------- フッター ---------- -->
     <footer>
-      <div class="footer-area__past">
-        <div class="footer-text">
-          <h3 class="footer-text__title">Thanks</h3>
-          <p class="footer-text__about">movie design ： HIRO</p>
-          <p class="footer-text__about">sound design ： SATOSHI</p>
-          <p class="footer-text__about">
-            HP create ：
-            <a target="blank" rel="noopener" href="https://daichito.com/">DAICHI</a>
-          </p>
+      <div id="footer" class="footer">
+        <div class="logo-wrap">
+          <div class="logo-wrapinner"></div>
+          <div class="logo-speech">
+            <figure>
+              <img src="img/speech.png" alt="吹き出しアイコン" />
+            </figure>
+            <p>Keep on grooving!<br />Keep on loving!</p>
+          </div>
+          <div class="footer-area">
+            <div class="footer-area__inner">
+              <div class="footer-text">
+                <h3 class="footer-text__title">Thanks</h3>
+                <p class="footer-text__about">movie design ： HIRO</p>
+                <p class="footer-text__about">sound design ： SATOSHI</p>
+                <p class="footer-text__about">
+                  HP create ：
+                  <a target="blank" rel="noopener" href="https://daichito.com/">DAICHI</a>
+                </p>
+              </div>
+              <div class="contact">
+                <h3 class="footer-text__title">Contact</h3>
+                <div class="social-icon">
+                  <a target="blank" rel="noopener" href="mailform/index.html"><i class="fas fa-3x fa-envelope faa-horizontal animated-hover"></i></a>
+                </div>
+              </div>
+            </div>
+            <p class="footer-copy">&copy; 2020　Dr.Tosh / NagaiToshimitsu</p>
+          </div>
         </div>
-        <p class="footer-copy">&copy; 2020　Dr.Tosh / NagaiToshimitsu</p>
       </div>
     </footer>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

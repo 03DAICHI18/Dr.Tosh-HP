@@ -1,7 +1,6 @@
 .sale {
   width: 50%;
-  padding: 48px 16px;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 48px 24px;
   color: #333333;
 
   a {
@@ -12,14 +11,19 @@
 @include sp {
   .sale {
     width: 100%;
-    padding: 24px 8px;
+    padding: 24px 16px;
   }
 }
 
 .sale-subtitle {
   @include fontsize(14);
-  text-align: center;
   margin-bottom: 16px;
+}
+
+@include sp {
+  .sale-subtitle {
+    text-align: center;
+  }
 }
 
 .sale-subtitle::before,
@@ -30,7 +34,12 @@
 
 .sale-logo {
   width: 50%;
-  margin: 0 auto;
+}
+
+@include sp {
+  .sale-logo {
+    margin: 0 auto;
+  }
 }
 
 
@@ -55,12 +64,15 @@
 
 .sale-text {
   margin-top: 16px;
-  padding: 16px;
+  padding: 16px 0;
   line-height: 1.3em;
 }
 
-.sale-link {
-  text-align: center;
+@include sp {
+  .sale-link {
+    // text-align: ;
+    @include fontsize(14);
+  }
 }
 
 .sale-link::before {

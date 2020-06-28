@@ -1,7 +1,6 @@
 .talk {
   width: 50%;
-  padding: 48px 16px;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 48px;
   color: #333333;
 
   a {
@@ -15,6 +14,7 @@
     width: 100%;
   }
 }
+
 
 .talk-title {
   text-align: center;
@@ -44,14 +44,13 @@
 }
 
 .talk-contents {
-  display: none;
   width: 80%;
   margin: 0 auto;
-  padding: 16px;
+  padding: 32px;
   position: relative;
   letter-spacing: 1.5;
   line-height: 1.5em;
-  background: #eaeaea;
+  background: #f7f7f7;
   color: #333333;
   border-radius: 20px;
 }
@@ -63,7 +62,7 @@
   top: -8px;
   left: -40px;
   border: 16px solid transparent;
-  border-right: 40px solid #eaeaea;
+  border-right: 40px solid #f7f7f7;
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
 }
@@ -104,16 +103,12 @@
   }
 }
 
-/* ↓↓↓↓アコーディオンの重要な装飾↓↓↓↓ */
-/* jQueryでactiveクラスを追加させる。その時に表示させる上向き三角。 */
-.js-talk-trigger::after {
-  content: ">check";
-  font-weight: 900;
-  padding-left: 10px;
+// 下層ページ用
+.talk-content__Underlayer {
+  padding: 80px 0;
+  background-color: rgba($color: #000000, $alpha: .6);
 }
 
-.js-talk-trigger.open:after {
-  content: ">close";
-  font-weight: 900;
-  padding-left: 10px;
+.talk-heading__Underlaye {
+  color: #eaeaea;
 }

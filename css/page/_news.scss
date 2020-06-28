@@ -1,16 +1,15 @@
 .news {
   width: 100%;
   padding: 48px 32px;
-  background: rgba($color: #ffffff, $alpha: .9);
+  background: rgba($color: #fefefe, $alpha: .95);
   color: #333333;
 
   @include sp {
     padding: 32px 16px;
 
     .news__cap {
-      width: 300px;
-      height: 300px;
-      margin: 0 auto 1em;
+      max-width: 300px;
+      margin: 2em auto;
     }
 
     .news__cap img {
@@ -30,7 +29,8 @@
     }
 
     .news__cap {
-      max-width: 600px;
+      width: 300px;
+      margin: 2em 2em 2em 0;
     }
 
     .news__cap img {
@@ -126,13 +126,13 @@
 }
 
 .news-wrap {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .news__text {
+  padding: 32px 0;
   line-height: 1.5;
-  padding: 16px 0;
   border-bottom: 2px solid #504f4f;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .news__box {
-  background-color: #dfdfdf;
+  background-color: rgba(12, 12, 12, 0.1);
   border: 2px solid #504f4f;
   border-radius: 5px;
   margin: 40px 5px 5px 20px;
@@ -153,7 +153,7 @@
   background-color: #333333;
   border-radius: 5px;
   color: #fff;
-  content: 'Dr.Tosh永井利充より';
+  content: 'Dr.Tosh / 永井利充より';
   padding: 5px 20px;
   position: absolute;
   left: -10px;

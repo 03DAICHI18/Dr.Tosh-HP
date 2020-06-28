@@ -1,41 +1,81 @@
 @charset "UTF-8";
 body {
   font-family: 'Acme', sans-serif;
+  animation: fadein 2s forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 a {
-  color: #5fa1ed;
+  color: #333333;
   text-decoration: underline;
+  transition: all .3s;
 }
 
-@media (min-width: 769px) {
-  :root {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    font-size: 16px;
-    font-size: 1rem;
-  }
+a:hover {
+  opacity: .5;
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   padding: 24px;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   font-size: bold;
 }
 
-.contentwrap {
-  display: flex;
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 
-@media screen and (max-width: 480px) {
-  .contentwrap {
+.contentwrap {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.contentwrap h2,
+.contentwrap h3,
+.contentwrap p,
+.contentwrap a {
+  color: #F5F5F5;
+}
+
+.contentwrap-inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 600px) {
+  .contentwrap-inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contentwrap-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contentwrap-top {
     display: flex;
     flex-direction: column;
   }
@@ -59,12 +99,13 @@ a {
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
-  -webkit-animation: loadimg 1500ms ease-out forwards infinite;
-  animation: loadimg 1500ms ease-out forwards infinite;
+  -webkit-animation: loading 1500ms ease-out forwards infinite;
+  animation: loading 1500ms ease-out forwards infinite;
 }
 
-@keyframes loadimg {
-  from, to {
+@keyframes loading {
+  from,
+  to {
     width: 0;
   }
   50% {
@@ -85,7 +126,8 @@ a {
 }
 
 @keyframes loadanimetion {
-  from, to {
+  from,
+  to {
     opacity: 0;
   }
   50% {
@@ -103,11 +145,12 @@ a {
   position: fixed;
   top: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .pc-header__nav {
   display: flex;
+  justify-content: center;
   height: 48px;
   line-height: 48px;
 }
@@ -167,7 +210,7 @@ a {
     height: 3px;
     margin-top: 32px;
     border-radius: 2px;
-    background-color: #F5F5F5;
+    background-color: #101010;
     transition: all .5s;
   }
   #drawer-btn span:nth-of-type(1) {
@@ -504,7 +547,7 @@ body::before {
 .news {
   width: 100%;
   padding: 48px 32px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(254, 254, 254, 0.95);
   color: #333333;
 }
 
@@ -513,9 +556,8 @@ body::before {
     padding: 32px 16px;
   }
   .news .news__cap {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto 1em;
+    max-width: 300px;
+    margin: 2em auto;
   }
   .news .news__cap img {
     width: 100%;
@@ -532,7 +574,8 @@ body::before {
     flex-grow: 1;
   }
   .news .news__cap {
-    max-width: 600px;
+    width: 300px;
+    margin: 2em 2em 2em 0;
   }
   .news .news__cap img {
     width: 100%;
@@ -616,13 +659,13 @@ body::before {
 }
 
 .news-wrap {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .news__text {
+  padding: 32px 0;
   line-height: 1.5;
-  padding: 16px 0;
   border-bottom: 2px solid #504f4f;
 }
 
@@ -631,7 +674,7 @@ body::before {
 }
 
 .news__box {
-  background-color: #dfdfdf;
+  background-color: rgba(12, 12, 12, 0.1);
   border: 2px solid #504f4f;
   border-radius: 5px;
   margin: 40px 5px 5px 20px;
@@ -643,7 +686,7 @@ body::before {
   background-color: #333333;
   border-radius: 5px;
   color: #fff;
-  content: 'Dr.Tosh永井利充より';
+  content: 'Dr.Tosh / 永井利充より';
   padding: 5px 20px;
   position: absolute;
   left: -10px;
@@ -725,8 +768,7 @@ body::before {
 
 .sale {
   width: 50%;
-  padding: 48px 16px;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 48px 24px;
   color: #333333;
 }
 
@@ -737,15 +779,20 @@ body::before {
 @media (max-width: 768px) {
   .sale {
     width: 100%;
-    padding: 24px 8px;
+    padding: 24px 16px;
   }
 }
 
 .sale-subtitle {
   font-size: 14px;
   font-size: 0.875rem;
-  text-align: center;
   margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .sale-subtitle {
+    text-align: center;
+  }
 }
 
 .sale-subtitle::before,
@@ -756,7 +803,12 @@ body::before {
 
 .sale-logo {
   width: 50%;
-  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .sale-logo {
+    margin: 0 auto;
+  }
 }
 
 .sale-logo a img {
@@ -779,12 +831,15 @@ body::before {
 
 .sale-text {
   margin-top: 16px;
-  padding: 16px;
+  padding: 16px 0;
   line-height: 1.3em;
 }
 
-.sale-link {
-  text-align: center;
+@media (max-width: 768px) {
+  .sale-link {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
 }
 
 .sale-link::before {
@@ -794,8 +849,7 @@ body::before {
 
 .talk {
   width: 50%;
-  padding: 48px 16px;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 48px;
   color: #333333;
 }
 
@@ -838,14 +892,13 @@ body::before {
 }
 
 .talk-contents {
-  display: none;
   width: 80%;
   margin: 0 auto;
-  padding: 16px;
+  padding: 32px;
   position: relative;
   letter-spacing: 1.5;
   line-height: 1.5em;
-  background: #eaeaea;
+  background: #f7f7f7;
   color: #333333;
   border-radius: 20px;
 }
@@ -857,7 +910,7 @@ body::before {
   top: -8px;
   left: -40px;
   border: 16px solid transparent;
-  border-right: 40px solid #eaeaea;
+  border-right: 40px solid #f7f7f7;
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
 }
@@ -897,23 +950,20 @@ body::before {
   }
 }
 
-/* ↓↓↓↓アコーディオンの重要な装飾↓↓↓↓ */
-/* jQueryでactiveクラスを追加させる。その時に表示させる上向き三角。 */
-.js-talk-trigger::after {
-  content: ">check";
-  font-weight: 900;
-  padding-left: 10px;
+.talk-content__Underlayer {
+  padding: 80px 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.js-talk-trigger.open:after {
-  content: ">close";
-  font-weight: 900;
-  padding-left: 10px;
+.talk-heading__Underlaye {
+  color: #eaeaea;
 }
 
 .active {
-  padding: 48px 0;
-  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  max-width: 1200px;
+  padding: 48px 24px;
+  margin-bottom: 80px;
 }
 
 .active .active-title {
@@ -922,49 +972,58 @@ body::before {
   margin-bottom: 48px;
 }
 
-.active video {
-  width: 77vw;
-  max-width: 720px;
-  height: 50vw;
-  max-height: 480px;
+.iframe {
+  width: 40vw;
+  height: calc(40vw * 0.5625);
+  max-width: 500px;
+  max-height: calc(500px * 0.5625);
+}
+
+.iframe iframe {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  border: 1px solid #4f4f4f;
 }
 
 @media (max-width: 768px) {
-  .active video {
-    min-width: 300px;
-    min-height: 170px;
+  .iframe {
+    margin: 0 auto;
+    width: 85vw;
+    height: calc(85vw * 0.5625);
+  }
+  .iframe iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #4f4f4f;
   }
 }
 
-.active iframe {
-  width: 77vw;
-  max-width: 720px;
-  height: 50vw;
-  max-height: 480px;
+.active-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-  .active iframe {
-    min-width: 300px;
-    min-height: 170px;
+  .active-inner {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .active-content {
-  margin: 0 auto 24px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .active-content p {
   padding-bottom: 10px;
 }
 
-.contents {
-  margin-top: 20px;
-}
-
-.contents p {
-  margin: 5vw 0 2.5vw 0;
+.social-name {
+  margin-bottom: 16px;
 }
 
 @media (max-width: 768px) {
@@ -973,40 +1032,17 @@ body::before {
   }
 }
 
-.social {
-  width: 100%;
-  padding: 50px 32px 74px;
-  background: rgba(0, 0, 0, 0.9);
-  color: #e1e1e1;
-}
-
-.social-title {
-  text-align: center;
-  font-size: 30px;
-  font-size: 1.875rem;
-  margin-bottom: 24px;
-}
-
 .social-wrap {
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
-}
-
-@media (min-width: 769px) {
-  .social-wrap {
-    width: 480px;
-  }
+  width: 30%;
 }
 
 @media (max-width: 768px) {
   .social-wrap {
-    width: 60%;
+    width: 80%;
+    margin: 0 auto;
   }
-}
-
-.social-icon a {
-  color: #F5F5F5;
 }
 
 .footer {
@@ -1143,7 +1179,7 @@ body::before {
 }
 
 .footer-area__inner {
-  width: 50%;
+  max-width: 500px;
   margin: 0 auto;
   padding: 0 16px;
   display: flex;
@@ -1153,7 +1189,7 @@ body::before {
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
   .footer-area__inner {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -1213,4 +1249,8 @@ body::before {
 .contact {
   padding-top: 24px;
   text-align: center;
+}
+
+.contact a {
+  color: #F5F5F5;
 }

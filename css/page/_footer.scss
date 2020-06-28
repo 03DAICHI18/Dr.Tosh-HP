@@ -127,7 +127,8 @@
 }
 
 .footer-area__inner {
-  width: 50%;
+  // width: 50%;
+  max-width: 500px;
   margin: 0 auto;
   padding: 0 16px;
   display: flex;
@@ -138,7 +139,7 @@
 
 @media screen and (min-width:600px) and (max-width:767px) {
   .footer-area__inner {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -191,4 +192,8 @@
 .contact {
   padding-top: 24px;
   text-align: center;
+}
+
+.contact a {
+  color: #F5F5F5;
 }
