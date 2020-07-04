@@ -3,14 +3,31 @@
   max-width: 1200px;
   padding: 48px 24px;
   margin-bottom: 80px;
+  border-top: 1px solid #e8e8e8;
 
-  .active-title {
+  .section-title {
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 48px;
   }
 }
 
+@include sp {
+  .active {
+    padding: 0 0 24px 0;
+    position: relative;
+  }
+
+  .active::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 30%;
+    background-color: #e8e8e8;
+  }
+
+}
 
 .iframe {
   width: 40vw;
@@ -57,10 +74,14 @@
 
 .active-content {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 
   p {
     padding-bottom: 10px;
+  }
+
+  a {
+    color: #e8e8e8;
   }
 }
 
@@ -68,16 +89,12 @@
   margin-bottom: 16px;
 }
 
-@include sp {
-  .active {
-    padding: 0 0 24px 0;
-  }
-}
-
 .social-wrap {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 50%;
+  margin: 0 auto;
+
 }
 
 @include sp {

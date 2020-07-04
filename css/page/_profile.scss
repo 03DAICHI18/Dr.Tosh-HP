@@ -1,5 +1,9 @@
 .profile {
-  color: #ffffff;
+  color: #e8e8e8;
+
+.section-title {
+  color: #fcfcfc;
+}
 }
 
 .profile-name {
@@ -34,6 +38,10 @@
 
 
 .profile-text {
+  .section-title {
+    text-align: center;
+  }
+
   p {
     padding-bottom: 2em;
   }
@@ -49,12 +57,6 @@
     display: block;
     width: 100%;
     margin: 0 auto;
-  }
-
-  &__title {
-    font-size: 40px;
-    padding: 16px;
-    text-align: center;
   }
 
   @include pc {

@@ -1,22 +1,24 @@
 .sale {
   width: 50%;
-  padding: 48px 24px;
-  color: #333333;
+  padding: 48px 24px 80px;
+  color: #e8e8e8;
 
   a {
     text-decoration: underline;
+    color: #e8e8e8;
   }
 }
 
 @include sp {
   .sale {
     width: 100%;
-    padding: 24px 16px;
+    padding: 24px 16px 56px;
+    border-right: 1px solid #e8e8e8;
   }
 }
 
 .sale-subtitle {
-  @include fontsize(14);
+  // @include fontsize(14);
   margin-bottom: 16px;
 }
 
@@ -70,7 +72,6 @@
 
 @include sp {
   .sale-link {
-    // text-align: ;
     @include fontsize(14);
   }
 }

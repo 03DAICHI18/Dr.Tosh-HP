@@ -1,13 +1,12 @@
 .section-title {
-  text-align: left;
-  padding: 24px;
-  @include fontsize(30);
+  padding: 24px 24px 24px 0;
+  @include fontsize(40);
   font-size: bold;
 }
 
 @include sp {
   .section-title {
-    @include fontsize(24);
+    @include fontsize(32);
     text-align: center;
   }
 }
@@ -16,12 +15,11 @@
 .contentwrap {
   width: 100%;
   background: rgba(0, 0, 0, 0.9);
+  color: #e8e8e8;
 
-  h2,
-  h3,
-  p,
-  a {
-    color: #F5F5F5;
+  .section-title {
+    margin-bottom: 16px;
+    color: #fcfcfc;
   }
 }
 

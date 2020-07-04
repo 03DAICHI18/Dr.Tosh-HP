@@ -57,6 +57,11 @@
       <!--  ヘッダー レスポンシブレイアウト max-width: 768px -->
       <div class="sp-header">
         <div class="drawer">
+          <div id="drawer-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <nav>
             <ul id="drawer-menu">
               <li class="drawer-menu__hidden"><a href="#top">Top</a></li>
@@ -68,11 +73,6 @@
               <li class="drawer-menu__hidden"><a href="#footer">Footer</a></li>
             </ul>
           </nav>
-          <div id="drawer-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
         </div>
       </div>
       <!-- スクロール誘導 -->
@@ -99,7 +99,7 @@
             </div>
             <div class="profile-text">
               <div class="profile-text__about">
-                <h2 id="profile" class="profile-text__title">Profile</h2>
+                <h2 id="profile" class="section-title">Profile</h2>
                 <p>ローザ・ルクセンブルグにて MIDIRECORDよりデビュー。</p>
                 <p>その後、どんと(久富隆司)とともに伝説のバンド、BO GUMBOS (ボガンボス)を結成。</p>
                 <p>
@@ -125,18 +125,16 @@
       </section>
 
       <!-- ---------- プロフィールスライドショー ---------- -->
-      <section>
-        <div class="slideimg">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <!-- 各スライド -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-            </div>
+      <div class="slideimg">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- 各スライド -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- ---------- ニュース ---------- -->
       <section>
@@ -144,7 +142,7 @@
           <div class="news-wrap">
             <h2 class="section-title">News</h2>
             <dl class="news__text">
-              <dt>【2020/6/28 更新】</dt>
+              <dt class="news-dt">【2020/6/28 更新】</dt>
               <div class="news__flex">
                 <figure class="news__cap">
                   <a target="blank" rel="noopener" href="https://drtosh.official.ec"><img src="img/Grandmalogo.png" alt="ecサイトGrandmaへのリンクロゴ">
@@ -156,7 +154,7 @@
               </div>
             </dl>
             <dl class="news__text">
-              <dt>【2020/5/29 更新】</dt>
+              <dt class="news-dt">【2020/5/29 更新】</dt>
               <div class="news__flex">
                 <figure class="news__cap"><img src="img/news-img.png" alt="BO GUMBOS「1989」STAY AT HOME ＆ WATCH THE MUSIC"></figure>
                 <div class="news__text-wrap">
@@ -170,11 +168,11 @@
               </div>
             </dl>
             <dl class="news__text">
-              <dt>【2020/5/23 更新】</dt>
+              <dt class="news-dt">【2020/5/23 更新】</dt>
               <dd class="news__text-content">2020/7/5予定<br><a target="blank" rel="noopener" href="https://www.facebook.com/HOTMOTTOGUMBO/photos/a.408512085920102/2698570340247587/?type=3&theater">HOTMOTTOGUMBO 2020@kyoto磔磔イベント中止のお知らせ</a></dd>
             </dl>
             <dl class="news__text">
-              <dt>【2020/5/16 更新】</dt>
+              <dt class="news-dt">【2020/5/16 更新】</dt>
               <dd class="news__text-content">
                 いつも応援していただき誠にありがとうございます。<br />新型コロナウィルス感染拡大の影響を受け、皆様の健康と安全を考慮し、現在全ライブスケジュールを延期させていただいております。<br />尚、ライブ再開のめどが立ち次第HPにてスケジュールなどを告知いたしますので、今後ともよろしくお願い致します
               </dd>
@@ -205,34 +203,32 @@
       </section>
 
       <!-- ---------- Liveスライドショー ---------- -->
-      <section>
-        <div class="live">
-          <div class="live-visual">
-            <ul class="slideshow">
-              <li><img src="img/livephoto9.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto10.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto1.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto2.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto3.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto5.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto6.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto7.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto8.jpg" alt="Live画像" /></li>
-            </ul>
-            <ul class="slideshow">
-              <li><img src="img/livephoto9.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto10.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto1.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto2.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto3.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto5.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto6.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto7.jpg" alt="Live画像" /></li>
-              <li><img src="img/livephoto8.jpg" alt="Live画像" /></li>
-            </ul>
-          </div>
+      <div class="live">
+        <div class="live-visual">
+          <ul class="slideshow">
+            <li><img src="img/livephoto9.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto10.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto1.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto2.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto3.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto5.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto6.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto7.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto8.jpg" alt="Live画像" /></li>
+          </ul>
+          <ul class="slideshow">
+            <li><img src="img/livephoto9.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto10.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto1.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto2.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto3.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto5.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto6.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto7.jpg" alt="Live画像" /></li>
+            <li><img src="img/livephoto8.jpg" alt="Live画像" /></li>
+          </ul>
         </div>
-      </section>
+      </div>
 
       <!-- contentwrapここから -->
       <div class="contentwrap">
@@ -256,6 +252,7 @@
             <!-- ---------- ここだけの話 ---------- -->
             <section id="talk" class="talk conetnts">
               <h2 class="section-title">talk</h2>
+              <p class="talk-about">SNSでは語られない、ちょっとレアな「ここだけの話」を不定期更新！</p>
               <div class="talk-content">
                 <h3 class="talk-heading js-talk-trigger"><a href="talk.html/talk003.html">星野源さんとの《ここだけの話》</a></h3>
               </div>
@@ -273,11 +270,11 @@
             <div class="social-wrap">
               <div class="active-content">
                 <h3 class="social-name">facebook</h3>
-                <a target="blank" rel="noopener" href="https://www.facebook.com/tosh.nagai.1"><i class="fab fa-facebook-square fa-3x faa-horizontal animated-hover"></i></a>
+                <a target="blank" rel="noopener" href="https://www.facebook.com/tosh.nagai.1"><i class="fab fa-facebook-square fa-5x"></i></a>
               </div>
               <div class="active-content">
                 <h3 class="social-name">twitter</h3>
-                <a target="blank" rel="noopener" href="https://twitter.com/DrTosh777"><i class="fab fa-twitter-square fa-3x faa-horizontal animated-hover"></i></a>
+                <a target="blank" rel="noopener" href="https://twitter.com/DrTosh777"><i class="fab fa-twitter-square fa-5x"></i></a>
               </div>
             </div>
             <div class="active-inner">
@@ -325,7 +322,7 @@
               <div class="contact">
                 <h3 class="footer-text__title">Contact</h3>
                 <div class="social-icon">
-                  <a target="blank" rel="noopener" href="mailform/index.html"><i class="fas fa-3x fa-envelope faa-horizontal animated-hover"></i></a>
+                  <a target="blank" rel="noopener" href="mailform/index.html"><i class="fas fa-3x fa-envelope"></i></a>
                 </div>
               </div>
             </div>

@@ -2,7 +2,6 @@
   width: 100%;
   padding: 48px 32px;
   background: rgba($color: #fefefe, $alpha: .95);
-  color: #333333;
 
   @include sp {
     padding: 32px 16px;
@@ -134,10 +133,19 @@
   padding: 32px 0;
   line-height: 1.5;
   border-bottom: 2px solid #504f4f;
+  color: #454545;
+}
+
+.news-dt {
+  margin-bottom: 16px;
 }
 
 .news__text-content {
   margin-left: 1em;
+}
+
+.news__text-content a {
+  color: #454545;
 }
 
 .news__box {
