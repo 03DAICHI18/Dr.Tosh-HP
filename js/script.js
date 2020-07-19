@@ -6,10 +6,8 @@ $(function () {
 
     if ($(this).hasClass("open")) {
       $("body , #drawer-btn").addClass("open");
-      $('#drawer-btn').css('background-color', 'rgba(0,0,0,0)');
     } else {
       $("body , #drawer-btn").removeClass("open");
-      $('#drawer-btn').css('background-color', 'rgba(0,0,0,0.5)');
     }
 
     $("#drawer-menu").slideToggle();
