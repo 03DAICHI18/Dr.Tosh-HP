@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: 'Acme', sans-serif;
-  animation: fadein 2s forwards;
+  animation: fadein 3s forwards;
 }
 
 @keyframes fadein {
@@ -76,60 +76,6 @@ a:hover {
   .contentwrap-top {
     display: flex;
     flex-direction: column;
-  }
-}
-
-.load {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-  left: 0px;
-  background: #f7f7f7;
-  z-index: 9999;
-}
-
-.load img {
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
-  -webkit-animation: loading 1500ms ease-out forwards infinite;
-  animation: loading 1500ms ease-out forwards infinite;
-}
-
-@keyframes loading {
-  from,
-  to {
-    width: 0;
-  }
-  50% {
-    width: 10%;
-  }
-}
-
-.load__animation {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
-  color: #131212;
-  -webkit-animation: loadanimetion 1500ms ease-out forwards infinite;
-  animation: loadanimetion 1500ms ease-out forwards infinite;
-}
-
-@keyframes loadanimetion {
-  from,
-  to {
-    opacity: 0;
-  }
-  50% {
-    opacity: .5;
   }
 }
 
