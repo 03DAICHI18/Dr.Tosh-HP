@@ -8,6 +8,7 @@
 
     .news__cap {
       max-width: 300px;
+      object-fit: cover;
       margin: 2em auto;
     }
 
@@ -28,7 +29,7 @@
     }
 
     .news__cap {
-      width: 300px;
+      width: 600px;
       margin: 2em 2em 2em 0;
     }
 
@@ -141,7 +142,11 @@
 }
 
 .news__text-content {
-  margin-left: 1em;
+  margin: 0 1em .5em 0;
+}
+
+.news__text-content--bold {
+  font-weight: bold;
 }
 
 .news__text-content a {

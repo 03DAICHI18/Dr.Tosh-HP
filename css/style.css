@@ -503,6 +503,7 @@ body::before {
   }
   .news .news__cap {
     max-width: 300px;
+    object-fit: cover;
     margin: 2em auto;
   }
   .news .news__cap img {
@@ -520,7 +521,7 @@ body::before {
     flex-grow: 1;
   }
   .news .news__cap {
-    width: 300px;
+    width: 600px;
     margin: 2em 2em 2em 0;
   }
   .news .news__cap img {
@@ -621,7 +622,11 @@ body::before {
 }
 
 .news__text-content {
-  margin-left: 1em;
+  margin: 0 1em .5em 0;
+}
+
+.news__text-content--bold {
+  font-weight: bold;
 }
 
 .news__text-content a {
