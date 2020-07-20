@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 body {
   font-family: 'Acme', sans-serif;
   animation: fadein 3s forwards;
@@ -9,7 +8,6 @@ body {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 100%;
   }
@@ -132,11 +130,9 @@ a:hover {
   .pc-header {
     display: none;
   }
-
   .sp-header {
     display: block;
   }
-
   .drawer {
     position: absolute;
     top: 0;
@@ -144,17 +140,14 @@ a:hover {
     width: 100%;
     height: 100vh;
   }
-
   #drawer-btn {
     position: fixed;
     width: 100%;
     height: 40px;
-    background: rgba(0, 0, 0, 0.5);
     z-index: 120;
     transition: 0.3s;
     cursor: pointer;
   }
-
   #drawer-btn span {
     position: fixed;
     right: 10%;
@@ -164,19 +157,15 @@ a:hover {
     background-color: #c2c1c1;
     transition: all .5s;
   }
-
   #drawer-btn span:nth-of-type(1) {
     top: 9px;
   }
-
   #drawer-btn span:nth-of-type(2) {
     top: 18px;
   }
-
   #drawer-btn span:nth-of-type(3) {
     top: 27px;
   }
-
   /* 最初のspanをマイナス45度に */
   #drawer-btn.open span:nth-child(1) {
     top: 18px;
@@ -184,7 +173,6 @@ a:hover {
     -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-
   /* 2番目と3番目のspanを45度に */
   #drawer-btn.open span:nth-child(2),
   #drawer-btn.open span:nth-child(3) {
@@ -193,7 +181,6 @@ a:hover {
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-
   #drawer-menu {
     display: none;
     width: 100%;
@@ -203,14 +190,12 @@ a:hover {
     left: 0;
     background: rgba(0, 0, 0, 0.5);
   }
-
   #drawer-menu .drawer-menu__hidden {
     width: 100%;
     height: calc(100% / 7);
     z-index: 110;
     cursor: pointer;
   }
-
   #drawer-menu .drawer-menu__hidden a {
     width: 30%;
     padding-top: 30px;
@@ -276,12 +261,10 @@ body.open {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
   }
-
   60% {
     -webkit-transform: translate3d(-50%, 100px, 0);
     transform: translate3d(-50%, 100px, 0);
   }
-
   100% {
     -webkit-transform: translate3d(-50%, 100px, 0);
     transform: translate3d(-50%, 100px, 0);
@@ -380,7 +363,6 @@ body::before {
     padding: 16px;
     background: rgba(0, 0, 0, 0.3);
   }
-
   .profile-text .profile-text__about .profile-text__about--link a {
     color: #9ebcf5;
     text-decoration: underline;
@@ -393,7 +375,6 @@ body::before {
     background: rgba(0, 0, 0, 0.3);
     line-height: 1.5;
   }
-
   .profile-text .profile-text__about .profile-text__about--link a {
     color: #9ebcf5;
     text-decoration: underline;
@@ -519,13 +500,11 @@ body::before {
   .news {
     padding: 32px 16px;
   }
-
   .news .news__cap {
     max-width: 300px;
     object-fit: cover;
     margin: 2em auto;
   }
-
   .news .news__cap img {
     width: 100%;
     height: 100%;
@@ -537,16 +516,13 @@ body::before {
     display: flex;
     align-items: center;
   }
-
   .news .news__text-wrap {
     flex-grow: 1;
   }
-
   .news .news__cap {
     width: 600px;
     margin: 2em 2em 2em 0;
   }
-
   .news .news__cap img {
     width: 100%;
     height: 100%;
@@ -571,16 +547,13 @@ body::before {
   .news table tr {
     border-bottom: 3px solid #333333;
   }
-
   .news table th {
     padding: 16px;
   }
-
   .news table td {
     padding: 16px;
     line-height: 1.5;
   }
-
   .news table .td-event {
     width: 50%;
   }
@@ -597,42 +570,34 @@ body::before {
     border-top: 3px solid #333333;
     border-bottom: 3px solid #333333;
   }
-
   .news table th {
     display: none;
   }
-
   .news table td {
     display: block;
     width: 100%;
     line-height: 1.5;
   }
-
   .news table .td-event-title {
     display: inline-block;
     padding-bottom: 16px;
   }
-
   .news table .td-place {
     display: inline-block;
     padding-bottom: 16px;
   }
-
   .news table .td-join {
     display: block;
     margin-bottom: 24px;
   }
-
   .news table .td-event::before {
     content: "events:";
     display: block;
   }
-
   .news table .td-place::before {
     content: "place:";
     display: block;
   }
-
   .news table .td-join::before {
     content: "join:";
     display: block;
@@ -731,14 +696,12 @@ body::before {
     height: 300px;
     background: rgba(0, 0, 0, 0.9);
   }
-
   .live-visual {
     width: 240px;
     height: 240px;
     display: flex;
     align-items: center;
   }
-
   .slideshow img {
     object-fit: cover;
     border: 5px double #f6f6f6;
@@ -757,7 +720,6 @@ body::before {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-100%);
   }
@@ -817,7 +779,6 @@ body::before {
   .sale-logo {
     width: 70%;
   }
-
   .sale-logo a img {
     width: 100%;
   }
@@ -950,7 +911,6 @@ body::before {
   .talk-heading {
     text-align: left;
   }
-
   .talk-contents {
     width: 90%;
   }
@@ -959,6 +919,11 @@ body::before {
 .talk-content__underlayer {
   padding: 80px 8px;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.talk-content__underlayer-inner {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .talk-heading__underlaye {
@@ -990,11 +955,9 @@ body::before {
     font-size: 24px;
     font-size: 1.5rem;
   }
-
   .talk-about__underlaye {
     padding-left: 16px;
   }
-
   .talk-link__underlaye-top a {
     font-size: 16px;
     font-size: 1rem;
@@ -1018,7 +981,6 @@ body::before {
     padding: 0 0 24px 0;
     position: relative;
   }
-
   .active::before {
     content: "";
     display: inline-block;
@@ -1051,7 +1013,6 @@ body::before {
     width: 85vw;
     height: calc(85vw * 0.5625);
   }
-
   .iframe iframe {
     width: 100%;
     height: 100%;
@@ -1123,11 +1084,9 @@ body::before {
     top: 10%;
     right: 5%;
   }
-
   .logo-speech img {
     width: 300px;
   }
-
   .logo-speech p {
     position: absolute;
     top: 28%;
@@ -1142,11 +1101,9 @@ body::before {
     top: 10%;
     right: 0;
   }
-
   .logo-speech img {
     width: 250px;
   }
-
   .logo-speech p {
     position: absolute;
     top: 30%;
@@ -1161,11 +1118,9 @@ body::before {
     top: 10%;
     right: 0%;
   }
-
   .logo-speech img {
     width: 200px;
   }
-
   .logo-speech p {
     position: absolute;
     top: 25%;
@@ -1180,11 +1135,9 @@ body::before {
     top: 10%;
     right: 0%;
   }
-
   .logo-speech img {
     width: 180px;
   }
-
   .logo-speech p {
     position: absolute;
     top: 25%;

@@ -116,6 +116,11 @@
   background-color: rgba($color: #000000, $alpha: .6);
 }
 
+.talk-content__underlayer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .talk-heading__underlaye {
   @include fontsize(30);
   color: #eaeaea;
