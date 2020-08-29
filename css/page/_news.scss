@@ -25,11 +25,11 @@
     }
 
     .news__text-wrap {
-      flex-grow: 1;
+      flex-basis: 600px;
     }
 
     .news__cap {
-      width: 600px;
+      flex-basis: 400px;
       margin: 2em 2em 2em 0;
     }
 
