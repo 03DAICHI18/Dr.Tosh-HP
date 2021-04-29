@@ -1,24 +1,24 @@
 body {
-  font-family: 'Acme', sans-serif;
-  animation: fadein 3s forwards;
+	font-family: "Acme", sans-serif;
+	animation: fadein 3s forwards;
 }
 
 @keyframes fadein {
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 100%;
-  }
+	100% {
+		opacity: 100%;
+	}
 }
 
 a {
-  color: #333333;
-  text-decoration: underline;
-  transition: all .3s;
+	color: #333;
+	text-decoration: underline;
+	transition: all .3s;
 }
 
 a:hover {
-  opacity: .5;
+	opacity: .7;
 }

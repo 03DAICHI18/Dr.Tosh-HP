@@ -1,185 +1,187 @@
 .news {
-  width: 100%;
-  padding: 48px 32px;
-  background: rgba($color: #fefefe, $alpha: .95);
+	width: 100%;
+	padding: 48px 32px;
+	background: rgba($color: #fefefe, $alpha: .95);
 
-  @include sp {
-    padding: 32px 16px;
+	@include sp {
+		padding: 32px 16px;
 
-    .news__cap {
-      max-width: 300px;
-      object-fit: cover;
-      margin: 2em auto;
-    }
+		.news__cap {
+			height: 300px;
+			max-width: 100%;
+			margin: 2em auto;
+		}
 
-    .news__cap img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+		.news__cap img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			font-family: "object-fit: cover;";  /*IE対策*/
+		}
+	}
+	@include pc {
+		.news__flex {
+			display: flex;
+			align-items: center;
+		}
 
-  @include pc {
-    .news__flex {
-      display: flex;
-      align-items: center;
-    }
+		.news__text-wrap {
+			flex-basis: 600px;
+		}
 
-    .news__text-wrap {
-      flex-basis: 600px;
-    }
+		.news__cap {
+			flex-basis: 400px;
+			height: 300px;
+			margin: 2em 2em 2em 0;
+		}
 
-    .news__cap {
-      flex-basis: 400px;
-      margin: 2em 2em 2em 0;
-    }
+		.news__cap img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			font-family: "object-fit: cover;";  /*IE対策*/
+		}
+	}
 
-    .news__cap img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+	.td-place {
+		@include fontsize(14);
+	}
 
-  .td-place {
-    @include fontsize(14);
-  }
+	.td-join {
+		@include fontsize(14);
+	}
 
-  .td-join {
-    @include fontsize(14);
-  }
+	table {
+		width: 100%;
 
-  table {
-    width: 100%;
+		@include pc {
+			tr {
+				border-bottom: 3px solid #333;
+			}
 
-    @include pc {
-      tr {
-        border-bottom: 3px solid #333333;
-      }
+			th {
+				padding: 16px;
+			}
 
-      th {
-        padding: 16px;
-      }
+			td {
+				padding: 16px;
+				line-height: 1.5;
+			}
 
-      td {
-        padding: 16px;
-        line-height: 1.5;
-      }
+			.td-event {
+				width: 50%;
+			}
+		}
+		@include pc {
+			.td-place::before {
+				content: "［place］";
+			}
+		}
+		@include sp {
+			.td-time {
+				border-top: 3px solid #333;
+				border-bottom: 3px solid #333;
+			}
 
-      .td-event {
-        width: 50%;
-      }
-    }
+			th {
+				display: none;
+			}
 
-    @include pc {
-      .td-place::before {
-        content: "［place］";
-      }
-    }
+			td {
+				display: block;
+				width: 100%;
+				line-height: 1.5;
+			}
 
-    @include sp {
-      .td-time {
-        border-top: 3px solid #333333;
-        border-bottom: 3px solid #333333;
-      }
+			.td-event-title {
+				display: inline-block;
+				padding-bottom: 16px;
+			}
 
-      th {
-        display: none;
-      }
+			.td-place {
+				display: inline-block;
+				padding-bottom: 16px;
+			}
 
-      td {
-        display: block;
-        width: 100%;
-        line-height: 1.5;
-      }
-
-      .td-event-title {
-        display: inline-block;
-        padding-bottom: 16px;
-      }
-
-      .td-place {
-        display: inline-block;
-        padding-bottom: 16px;
-      }
-
-      .td-join {
-        display: block;
-        margin-bottom: 24px;
-      }
+			.td-join {
+				display: block;
+				margin-bottom: 24px;
+			}
 
 
-      .td-event::before {
-        content: "events:";
-        display: block;
-      }
+			.td-event::before {
+				content: "events:";
+				display: block;
+			}
 
-      .td-place::before {
-        content: "place:";
-        display: block;
-      }
+			.td-place::before {
+				content: "place:";
+				display: block;
+			}
 
-      .td-join::before {
-        content: "join:";
-        display: block;
-      }
-    }
-  }
+			.td-join::before {
+				content: "join:";
+				display: block;
+			}
+		}
+	}
 }
 
 .news-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .news__text {
-  padding: 32px 0;
-  line-height: 1.5;
-  border-bottom: 2px solid #504f4f;
-  color: #454545;
+	padding: 32px 0;
+	border-bottom: 2px solid #504f4f;
+	color: #454545;
+	line-height: 1.5;
 }
 
 .news-dt {
-  margin-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .news__text-content {
-  margin: 0 1em .5em 0;
+	margin: 0 1em .5em 0;
 }
 
 .news__text-content--bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .news__text-content a {
-  color: #454545;
+	color: #454545;
 }
 
 .news__box {
-  background-color: rgba(12, 12, 12, 0.1);
-  border: 2px solid #504f4f;
-  border-radius: 5px;
-  margin: 40px 5px 5px 20px;
-  padding: 10px 20px 20px 20px;
-  position: relative;
+	position: relative;
+	margin: 40px 5px 5px 20px;
+	padding: 10px 20px 20px 20px;
+	border: 2px solid #504f4f;
+	border-radius: 5px;
+	background-color: rgba(12, 12, 12, .1);
 }
 
 .news__box::before {
-  background-color: #333333;
-  border-radius: 5px;
-  color: #fff;
-  content: 'Dr.Tosh / 永井利充より';
-  padding: 5px 20px;
-  position: absolute;
-  left: -10px;
-  top: -20px;
+	content: "Dr.Tosh / 永井利充より";
+	position: absolute;
+	top: -20px;
+	left: -10px;
+	padding: 5px 20px;
+	border-radius: 5px;
+	background-color: #333;
+	color: #fff;
 }
 
 
 .news__box-text {
-  white-space: pre-line;
-  line-height: 1.8;
+	white-space: pre-line;
+	line-height: 1.8;
 }
 
 .news__past {
-  margin-top: 24px;
-  text-align: center;
+	margin-top: 24px;
+	text-align: center;
 }

@@ -1,158 +1,160 @@
 .talk {
-  width: 50%;
-  padding: 48px 24px 80px;
-  color: #e8e8e8;
-  border-left: 1px solid #e8e8e8;
+	width: 50%;
+	padding: 48px 24px 80px;
+	border-left: 1px solid #e8e8e8;
+	color: #e8e8e8;
 
-  a {
-    text-decoration: underline;
-    color: #e8e8e8;
-  }
+	a {
+		color: #e8e8e8;
+		text-decoration: underline;
+	}
 }
 
 @include sp {
-  .talk {
-    padding: 24px 8px;
-    width: 100%;
-    border-top: 1px solid #e8e8e8;
-  }
+	.talk {
+		width: 100%;
+		padding: 24px 8px;
+		border-top: 1px solid #e8e8e8;
+	}
 }
 
 .talk-about {
-  margin-bottom: 32px;
+	margin-bottom: 32px;
 }
 
 
 .talk-title {
-  text-align: center;
-  padding: 24px;
-  @include fontsize(24);
-  font-size: bold;
+	padding: 24px;
+	text-align: center;
+	font-weight: bold;
+
+	@include fontsize(24);
 }
 
 .talk-heading {
-  display: inline-block;
-  text-align: left;
-  padding: 16px;
-  text-decoration: underline;
-  cursor: pointer;
+	display: inline-block;
+	padding: 16px;
+	text-align: left;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .talk-heading::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f130";
-  font-weight: 900;
-  margin-right: 10px;
+	content: "\f130";
+	margin-right: 10px;
+	font-weight: 900;
+	font-family: "Font Awesome 5 Free";
 }
 
 
 .talk-content {
-  margin-bottom: 32px;
+	margin-bottom: 32px;
 }
 
 .talk-contents {
-  width: 80%;
-  margin: 0 auto;
-  padding: 32px;
-  position: relative;
-  letter-spacing: 1.5;
-  line-height: 1.5em;
-  background: #f7f7f7;
-  color: #333333;
-  border-radius: 20px;
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	padding: 32px;
+	border-radius: 20px;
+	background: #f7f7f7;
+	color: #333;
+	line-height: 1.5em;
 }
 
 .talk-contents::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: -8px;
-  left: -40px;
-  border: 16px solid transparent;
-  border-right: 40px solid #f7f7f7;
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: -8px;
+	left: -40px;
+	border: 16px solid transparent;
+	border-right: 40px solid #f7f7f7;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
 }
 
 .talk-contents p {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 .talk-contents__pre {
-  width: 100%;
-  white-space: pre-line;
+	width: 100%;
+	white-space: pre-line;
 }
 
 .talk-close {
-  width: 50%;
-  margin: 32px auto 16px;
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	margin: 32px auto 16px;
 }
 
 .talk-close__btn {
-  width: 100%;
-  padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #333333;
-  border-radius: 10%;
-  cursor: pointer;
-  border: none;
+	width: 100%;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 10%;
+	background: rgba(255, 255, 255, .9);
+	color: #333;
+	cursor: pointer;
 }
 
 @include sp {
-  .talk-heading {
-    text-align: left;
-  }
+	.talk-heading {
+		text-align: left;
+	}
 
-  .talk-contents {
-    width: 90%;
-  }
+	.talk-contents {
+		width: 90%;
+	}
 }
 
 // 下層ページ用
 .talk-content__underlayer {
-  padding: 80px 8px;
-  background-color: rgba($color: #000000, $alpha: .6);
+	padding: 80px 8px;
+	background-color: rgba($color: #000, $alpha: .6);
 }
 
 .talk-content__underlayer-inner {
-  max-width: 800px;
-  margin: 0 auto;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .talk-heading__underlaye {
-  @include fontsize(30);
-  color: #eaeaea;
-  text-decoration: none;
+	color: #eaeaea;
+	text-decoration: none;
+
+	@include fontsize(30);
 }
 
 .talk-about__underlaye {
-  padding-left: 32px;
-  color: #eaeaea;
+	padding-left: 32px;
+	color: #eaeaea;
 }
 
 .talk-link__underlaye-top {
-  margin-top: 32px;
-  text-align: center;
-  color: #eaeaea;
+	margin-top: 32px;
+	color: #eaeaea;
+	text-align: center;
 }
 
 .talk-link__underlaye-top a {
-  @include fontsize(20);
-  color: #eaeaea;
+	color: #eaeaea;
+
+	@include fontsize(20);
 }
 
 @include sp {
-  .talk-heading__underlaye {
-    @include fontsize(24);
-  }
+	.talk-heading__underlaye {
+		@include fontsize(24);
+	}
 
-  .talk-about__underlaye {
-    padding-left: 16px;
-  }
+	.talk-about__underlaye {
+		padding-left: 16px;
+	}
 
-  .talk-link__underlaye-top a {
-    @include fontsize(16);
-  }
+	.talk-link__underlaye-top a {
+		@include fontsize(16);
+	}
 }

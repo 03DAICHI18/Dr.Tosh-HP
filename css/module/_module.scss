@@ -1,54 +1,54 @@
 .section-title {
-  padding: 24px 24px 24px 0;
-  @include fontsize(40);
-  font-size: bold;
+	font-weight: bold;
+	@include fontsize(40);
+	padding: 24px 24px 24px 0;
 }
 
 @include sp {
-  .section-title {
-    @include fontsize(32);
-    text-align: center;
-  }
+	.section-title {
+		@include fontsize(32);
+		text-align: center;
+	}
 }
 
 // saleからactiveまでのセクション
 .contentwrap {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  color: #e8e8e8;
+	background: rgba(0, 0, 0, .95);
+	color: #e8e8e8;
+	width: 100%;
 
-  .section-title {
-    margin-bottom: 16px;
-    color: #fcfcfc;
-  }
+	.section-title {
+		color: #fcfcfc;
+		margin-bottom: 16px;
+	}
 }
 
 .contentwrap-inner {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 0 24px;
-  max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 24px;
 }
 
 @media screen and (max-width: 600px) {
-  .contentwrap-inner {
-    display: flex;
-    flex-direction: column;
-  }
+	.contentwrap-inner {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .contentwrap-top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 100%;
 }
 
 @include sp {
-  .contentwrap-top {
-    display: flex;
-    flex-direction: column;
-  }
+	.contentwrap-top {
+		display: flex;
+		flex-direction: column;
+	}
 }
